@@ -1,0 +1,42 @@
+# Environment & secrets
+.env
+*.env
+*.env.*
+
+# Data — never commit real or generated claim documents
+data/pdfs/
+data/synthetic_pdfs/
+data/output/
+data/raw/
+
+# Vector store
+chroma_db/
+
+# Logs
+logs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Docker
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VPN config (may contain credentials)
+*.ovpn

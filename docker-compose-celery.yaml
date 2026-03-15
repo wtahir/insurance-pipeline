@@ -1,0 +1,44 @@
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: insurance-pipeline:latest
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./chroma_db:/app/chroma_db
+    command: ["celery", "-A", "celery_app", "worker",
+              "--loglevel=info",
+              "--concurrency=4"]
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  pipeline:
+    image: insurance-pipeline:latest
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./chroma_db:/app/chroma_db
+    command: ["python", "-c",
+      "from tasks import process_all_documents; from config import PDF_FOLDER; process_all_documents(PDF_FOLDER)"]
+    depends_on:
+      worker:
+        condition: service_started
+      redis:
+        condition: service_healthy

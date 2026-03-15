@@ -1,0 +1,78 @@
+services:
+  stage1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: insurance-pipeline:latest
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./chroma_db:/app/chroma_db
+    command: ["python", "stage1_ingestion.py"]
+
+  stage2:
+    image: insurance-pipeline:latest
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./chroma_db:/app/chroma_db
+    command: ["python", "stage2_extraction.py"]
+    depends_on:
+      stage1:
+        condition: service_completed_successfully
+
+  stage3:
+    image: insurance-pipeline:latest
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./chroma_db:/app/chroma_db
+    command: ["python", "stage3_chunking.py"]
+    depends_on:
+      stage2:
+        condition: service_completed_successfully
+
+  stage4:
+    image: insurance-pipeline:latest
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./chroma_db:/app/chroma_db
+    command: ["python", "stage4_embedding.py"]
+    depends_on:
+      stage3:
+        condition: service_completed_successfully
+
+  stage5:
+    image: insurance-pipeline:latest
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./chroma_db:/app/chroma_db
+    command: ["python", "stage5_retrieval.py"]
+    depends_on:
+      stage4:
+        condition: service_completed_successfully
+
+  stage6:
+    image: insurance-pipeline:latest
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./chroma_db:/app/chroma_db
+    command: ["python", "stage6_evaluation.py"]
+    depends_on:
+      stage5:
+        condition: service_completed_successfully
