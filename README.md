@@ -1,59 +1,167 @@
-This project is about creating an end to end pipeline to extract and process insurance information. I am building it to get to know the challenges while using latest state of the art tech.
+# 🏛️ Insurance Document Intelligence Pipeline
 
-## The pipeline consists of the following steps:
- 
-1. Ingestion: This takes the pdfs as input and performs processing to convert data in structured format for the next steps. It creates jsons with text stored as a dict and additional keys for useful information.
+An end-to-end AI system that **reads insurance claim PDFs**, **extracts structured data**, and lets you **ask questions in plain English** — even when the source documents are in German.
 
-2. Extraction: Takes the jsons created in step 1 and extracts information such as claim number, document type etc.
+Built to demonstrate real-world challenges in document AI: multilingual processing, structured extraction with validation, semantic search, and automated quality evaluation.
 
-3. Chunking: Now that the data has the useful information in json format, chunking step chunks it into a fixed chunk size of 800 with minimum chunk size of 100. There is also a document threshold of 600 so that any document having less text should have a single chunk. Meanwhile the chunk size of 100 to avoid short less meaningful chunks. Chunking is done based on sentences with overlapping of few words and making sure that words dont split between chunks. It also contains meta data which is required to retrieve relevant chunks
+---
 
-4. Embedding: Converts chunking results into vectors and stores those in ChromaDB along with its metadata for retrieval in the later stage. Since the language is non English but the query is in English. The model used for embedding is capable of handling multiple languages.
+## What It Does
 
-5. Retrieval: Retrieve relevant chunks from Chroma based on user querry. Then generates an answer using GPT-4o using the context of the retrieved chunks.
+```
+  📄 PDF Claims        →   🔍 Read & Parse   →   🤖 Classify & Extract
+  (German emails,           (text from every       (claim number, sender,
+   invoices, letters)        page)                  urgency, date, type)
 
-6. Evaluation: Evaluate the relevancy of the chunks retrieved and generated answer
+         ↓                       ↓                        ↓
 
-## What I learned:
+  ✂️ Smart Chunking     →   📐 Vectorise      →   💬 Ask Questions
+  (overlapping pieces        (multilingual          (English questions,
+   that respect word          embeddings into         answers grounded
+   boundaries)                ChromaDB)               in real documents)
 
-I hit some bugs while creating this pipeline. I found out that because of the overlap calculation used, the character positions could land mid-word, so I added a word boundary search using text.find(' ') after calculating the new start position. There was an issue in formating prompt using .format method. Its simpler and bug free to keep prompt as it is and use it later on by calling it directly in a method. I also experienced the token limitation error which can happen if the LLM call generates an answer needing more tokens than the defined limit.
+         ↓
 
-## How to run the pipeline
+  📊 Auto-Evaluate
+  (GPT-4o scores both
+   retrieval & answer quality)
+```
 
-### 1) Setup environment
+---
 
-From the project root:
+## Pipeline Stages
+
+| # | Stage | What happens | Key tech |
+|---|-------|-------------|----------|
+| 1 | **Ingestion** | Reads PDFs, extracts text page-by-page, logs failures per page | pdfplumber |
+| 2 | **Extraction** | Classifies document type, pulls structured fields, validates with schemas | GPT-4o + Pydantic |
+| 3 | **Chunking** | Splits text into overlapping pieces (800 chars, 150 overlap) respecting sentences & word boundaries | Custom logic |
+| 4 | **Embedding** | Converts chunks into vectors, stores with metadata for filtered search | Sentence Transformers + ChromaDB |
+| 5 | **Retrieval** | Finds relevant chunks by meaning, generates a grounded English answer | ChromaDB + GPT-4o (RAG) |
+| 6 | **Evaluation** | Scores retrieval quality and answer quality, identifies failure types | GPT-4o-as-Judge |
+
+Each stage reads the previous stage's output and writes its own — you can rerun any single stage without starting over.
+
+---
+
+## Quick Start — Docker (recommended)
+
+> **Prerequisites:** [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) installed.
+>
+> **Note:** This project uses `docker-compose` (standalone). If you have the newer Docker Compose plugin, replace `docker-compose` with `docker compose` (no hyphen) in the commands below.
+
+### 1. Clone & configure
 
 ```bash
-cd ~/projects/insurance-pipeline
+git clone <your-repo-url>
+cd insurance-pipeline
+```
+
+Create a `.env` file in the project root with your Azure OpenAI credentials:
+
+```env
+AZURE_OPENAI_API_KEY=your_key_here
+AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
+AZURE_OPENAI_DEPLOYMENT=gpt-4o
+```
+
+### 2. Add your documents
+
+Place PDF files in:
+
+```
+data/pdfs/
+```
+
+### 3. Build the image
+
+```bash
+docker-compose build
+```
+
+This creates a single `insurance-pipeline:latest` image used by every stage.
+
+### 4. Run the full pipeline
+
+```bash
+docker-compose up
+```
+
+This runs **all 6 stages in order, automatically.** Each stage waits for the previous one to finish before starting. Results appear in `data/output/` and logs in `logs/` — both are shared with your machine through Docker volumes, so you can inspect them directly on your file system.
+
+### 5. Run a single stage (optional)
+
+To rerun just one stage (for example, extraction after fixing your `.env`):
+
+```bash
+docker-compose run --rm stage2
+```
+
+Replace `stage2` with any of `stage1` through `stage6`.
+
+### 6. Stop & clean up
+
+```bash
+docker-compose down
+```
+
+---
+
+## Run with Celery Workers (parallel processing)
+
+For large batches, the Celery setup processes multiple documents **in parallel** using Redis as a message queue:
+
+```bash
+docker-compose -f docker-compose-celery.yaml up
+```
+
+This starts three containers:
+
+| Container | Role |
+|-----------|------|
+| **redis** | Message queue between pipeline and workers |
+| **worker** | Picks up documents and runs stages 1→4 per document (4 concurrent) |
+| **pipeline** | Submits all PDFs from `data/pdfs/` to the queue |
+
+---
+
+## Run the Dashboard (demo UI)
+
+A visual dashboard designed for live demos and non-technical stakeholders:
+
+```bash
+# Option A — locally (recommended for demos)
+source venv/bin/activate
+./run_dashboard.sh
+
+# Option B — via Docker
+docker-compose run --rm -p 8501:8501 stage1 \
+  streamlit run ui/app.py --server.headless true
+```
+
+Then open **http://localhost:8501** in your browser.
+
+**Dashboard pages:**
+
+| Page | What you see |
+|------|-------------|
+| **Overview** | KPIs, architecture diagram, evaluation scores at a glance |
+| **Pipeline Runner** | Execute stages with real-time progress bars |
+| **Document Explorer** | Browse, search, and filter all documents with charts |
+| **Query Interface** | Ask questions in English, see retrieved chunks + AI answer |
+| **Evaluation Dashboard** | Retrieval vs answer quality charts, improvement suggestions |
+
+---
+
+## Run Locally (without Docker)
+
+```bash
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-If you already have `venv` created, just activate and install requirements.
-
-### 2) Configure environment variables
-
-Create or update `.env` in the project root with your Azure OpenAI settings:
-
-```env
-AZURE_OPENAI_API_KEY=your_key_here
-AZURE_OPENAI_ENDPOINT=https://your-resource-name.openai.azure.com/
-AZURE_OPENAI_DEPLOYMENT=gpt-4o
-```
-
-### 3) Add input files
-
-Place insurance PDFs in:
-
-```text
-data/pdfs/
-```
-
-### 4) Run all stages (manual sequence)
-
-Run these in order:
+Then run stages in order:
 
 ```bash
 python stage1_ingestion.py
@@ -64,127 +172,107 @@ python stage5_retrieval.py
 python stage6_evaluation.py
 ```
 
-This writes outputs to `data/output/` and logs to `logs/`.
+Outputs go to `data/output/`, logs to `logs/`.
 
-### 5) Run with the UI dashboard (recommended for demos)
+---
 
-```bash
-./run_dashboard.sh
+## Project Structure
+
+```
+insurance-pipeline/
+│
+├── stage1_ingestion.py         # PDF → structured text
+├── stage2_extraction.py        # Text → classified + extracted fields
+├── stage3_chunking.py          # Full text → overlapping chunks
+├── stage4_embedding.py         # Chunks → vectors in ChromaDB
+├── stage5_retrieval.py         # Query → relevant chunks → GPT-4o answer
+├── stage6_evaluation.py        # Score retrieval + answer quality
+│
+├── tasks.py                    # Celery task wrappers for parallel runs
+├── celery_app.py               # Celery + Redis configuration
+├── config.py                   # Paths and constants
+│
+├── ui/                         # Streamlit dashboard
+│   ├── app.py                  # Main entry point
+│   ├── pages/                  # Overview, Explorer, Query, Evaluation
+│   └── components/             # Theme, widgets, helpers
+│
+├── Dockerfile                  # Single image for all stages
+├── docker-compose.yml          # Sequential pipeline (stage1 → stage6)
+├── docker-compose-celery.yaml  # Parallel pipeline (Redis + workers)
+│
+├── data/
+│   ├── pdfs/                   # ← Put your input PDFs here
+│   └── output/                 # Stage outputs (JSON)
+├── logs/                       # Per-stage log files
+└── chroma_db/                  # Vector store (persisted)
 ```
 
-or:
+---
+
+## Technology Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Document parsing | pdfplumber |
+| LLM | Azure OpenAI GPT-4o |
+| Validation | Pydantic |
+| Embeddings | Sentence Transformers (multilingual MiniLM) |
+| Vector store | ChromaDB |
+| Orchestration | Docker Compose / Celery + Redis |
+| Dashboard | Streamlit + Plotly |
+| Containerisation | Docker |
+
+---
+
+## How to Debug
+
+### Check stage outputs
+
+Each stage writes a summary file you can inspect immediately:
+
+| Stage | Check this file |
+|-------|----------------|
+| 1 — Ingestion | `data/output/ingestion_summary.json` |
+| 2 — Extraction | `data/output/extraction_summary.json` |
+| 3 — Chunking | `data/output/chunking_summary.json` |
+| 4 — Embedding | `data/output/embedding_summary.json` |
+| 5 — Retrieval | `data/output/query_log.json` |
+| 6 — Evaluation | `data/output/evaluation_summary.json` |
+
+### Check logs
 
 ```bash
-streamlit run ui/app.py
-```
-
-Then open:
-
-```text
-http://localhost:8501
-```
-
-### 6) Optional: run Celery-based asynchronous processing
-
-If you want queued/background processing with workers:
-
-1. Start Redis.
-2. Start Celery worker.
-3. Submit jobs from `tasks.py` functions.
-
-Typical worker command:
-
-```bash
-celery -A celery_app.app worker --loglevel=info
-```
-
-## How to debug
-
-### Quick health checks
-
-Check expected outputs exist after each stage:
-
-- Stage 1: `data/output/ingested_data.json`, `data/output/ingestion_summary.json`
-- Stage 2: `data/output/extracted_data.json`, `data/output/extraction_summary.json`
-- Stage 3: `data/output/chunks.json`, `data/output/chunking_summary.json`
-- Stage 4: `data/output/embedding_summary.json` and `chroma_db/` populated
-- Stage 5: `data/output/query_log.json`
-- Stage 6: `data/output/evaluation_report.json`, `data/output/evaluation_summary.json`
-
-### Log files to inspect
-
-Each stage writes logs in `logs/`:
-
-- `logs/ingestion.log`
-- `logs/extraction.log`
-- `logs/chunking.log`
-- `logs/embedding.log`
-- `logs/retrieval.log`
-- `logs/evaluation.log`
-- `logs/celery_pipeline.log`
-
-Use:
-
-```bash
+# On your host (volumes are shared)
 tail -n 100 logs/extraction.log
 tail -n 100 logs/embedding.log
+
+# Inside a running Docker container
+docker-compose logs stage2
 ```
 
-### Common issues and fixes
+### Common issues
 
-1. **No chunks produced in Stage 3**
-	- Confirm Stage 2 produced successful records in `extracted_data.json`.
-	- Check that documents contain `original_content` and are not empty.
-	- Inspect `logs/chunking.log` for skipped/empty content warnings.
+| Problem | Likely cause | Fix |
+|---------|-------------|-----|
+| No chunks produced (Stage 3) | Empty `original_content` in extracted data | Check `extracted_data.json` — rerun Stage 2 |
+| 0 vectors stored (Stage 4) | `chunks.json` is empty | Rerun Stage 3, then Stage 4 |
+| Retrieval returns nothing | ChromaDB collection is empty | Confirm Stage 4 completed; check `embedding_summary.json` |
+| Azure OpenAI errors | Wrong key / endpoint / deployment | Re-check `.env` values |
+| Dashboard won't start | Missing dependencies | `pip install -r requirements.txt` and activate venv |
+| Docker stage fails | Missing `.env` or empty `data/pdfs/` | Add `.env` file and at least one PDF |
+| Docker build fails | Network or pip issue | Run `docker-compose build --no-cache` |
 
-2. **Embedding stores 0 vectors / batch failures**
-	- Confirm `data/output/chunks.json` is not empty.
-	- Verify sentence-transformers dependencies are installed.
-	- Check `logs/embedding.log` for batch error messages.
+### Rerun strategy
 
-3. **Retrieval returns no results**
-	- Confirm Stage 4 completed and collection has vectors.
-	- Verify Chroma path `chroma_db` exists and is readable.
-	- Try broader queries first (without metadata filters).
+- **API key issue** → fix `.env`, rerun only Stage 2
+- **Bad chunks** → rerun Stage 3, then Stage 4
+- **Poor answers** → rerun Stage 5 with different queries, then Stage 6
+- **Full reset** → delete `data/output/*`, `chroma_db/*`, and rerun from Stage 1
+- Use the **dashboard** to inspect data quality before doing a full re-run
 
-4. **Azure OpenAI errors (Stage 2/5/6)**
-	- Re-check `.env` keys and endpoint/deployment names.
-	- Ensure deployment supports chat completions.
-	- Check rate limits and retry after a short delay.
+---
 
-5. **Dashboard does not start**
-	- Activate `venv` first.
-	- Install UI dependencies: `pip install -r requirements.txt`.
-	- Run: `python -m streamlit run ui/app.py`.
+## What I Learned
 
-### Useful debug commands
-
-From project root:
-
-```bash
-# Validate JSON outputs quickly
-python -m json.tool data/output/extraction_summary.json > /dev/null && echo "extraction_summary.json OK"
-
-# Check how many chunks were generated
-python - << 'PY'
-import json
-with open('data/output/chunks.json', 'r', encoding='utf-8') as f:
-	 chunks = json.load(f)
-print('chunks:', len(chunks))
-PY
-
-# Check number of query records
-python - << 'PY'
-import json
-with open('data/output/query_log.json', 'r', encoding='utf-8') as f:
-	 q = json.load(f)
-print('queries:', len(q))
-PY
-```
-
-### Re-run strategy during debugging
-
-- If Stage 2 fails for API reasons, fix `.env` and rerun Stage 2 only.
-- If Stage 3 or 4 outputs look wrong, rerun Stage 3 then Stage 4.
-- If retrieval quality is poor, rerun Stage 5 with different queries/filters, then Stage 6.
-- Use the dashboard to inspect data quality before running full end-to-end again.
+I hit some bugs while creating this pipeline. I found out that because of the overlap calculation used, the character positions could land mid-word, so I added a word boundary search using `text.find(' ')` after calculating the new start position. There was an issue in formatting prompt using `.format` method. It's simpler and bug-free to keep the prompt as-is and use it later on by calling it directly in a method. I also experienced the token limitation error which can happen if the LLM call generates an answer needing more tokens than the defined limit.
