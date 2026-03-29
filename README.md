@@ -23,7 +23,7 @@ Built to demonstrate real-world challenges in document AI: multilingual processi
          ↓
 
   📊 Auto-Evaluate
-  (GPT-4o scores both
+  (LLM scores both
    retrieval & answer quality)
 ```
 
@@ -34,11 +34,11 @@ Built to demonstrate real-world challenges in document AI: multilingual processi
 | # | Stage | What happens | Key tech |
 |---|-------|-------------|----------|
 | 1 | **Ingestion** | Reads PDFs, extracts text page-by-page, logs failures per page | pdfplumber |
-| 2 | **Extraction** | Classifies document type, pulls structured fields, validates with schemas | GPT-4o + Pydantic |
+| 2 | **Extraction** | Classifies document type, pulls structured fields, validates with schemas | LLM + Pydantic |
 | 3 | **Chunking** | Splits text into overlapping pieces (800 chars, 150 overlap) respecting sentences & word boundaries | Custom logic |
 | 4 | **Embedding** | Converts chunks into vectors, stores with metadata for filtered search | Sentence Transformers + ChromaDB |
-| 5 | **Retrieval** | Finds relevant chunks by meaning, generates a grounded English answer | ChromaDB + GPT-4o (RAG) |
-| 6 | **Evaluation** | Scores retrieval quality and answer quality, identifies failure types | GPT-4o-as-Judge |
+| 5 | **Retrieval** | Finds relevant chunks by meaning, generates a grounded English answer | ChromaDB + LLM (RAG) |
+| 6 | **Evaluation** | Scores retrieval quality and answer quality, identifies failure types | LLM-as-Judge |
 
 Each stage reads the previous stage's output and writes its own — you can rerun any single stage without starting over.
 
@@ -57,12 +57,12 @@ git clone <your-repo-url>
 cd insurance-pipeline
 ```
 
-Create a `.env` file in the project root with your Azure OpenAI credentials:
+Create a `.env` file in the project root with your LLM provider credentials:
 
 ```env
 AZURE_OPENAI_API_KEY=your_key_here
 AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
-AZURE_OPENAI_DEPLOYMENT=gpt-4o
+AZURE_OPENAI_DEPLOYMENT=your-deployment-name
 ```
 
 ### 2. Add your documents
@@ -185,7 +185,7 @@ insurance-pipeline/
 ├── stage2_extraction.py        # Text → classified + extracted fields
 ├── stage3_chunking.py          # Full text → overlapping chunks
 ├── stage4_embedding.py         # Chunks → vectors in ChromaDB
-├── stage5_retrieval.py         # Query → relevant chunks → GPT-4o answer
+├── stage5_retrieval.py         # Query → relevant chunks → LLM answer
 ├── stage6_evaluation.py        # Score retrieval + answer quality
 │
 ├── tasks.py                    # Celery task wrappers for parallel runs
@@ -215,7 +215,7 @@ insurance-pipeline/
 | Layer | Technology |
 |-------|-----------|
 | Document parsing | pdfplumber |
-| LLM | Azure OpenAI GPT-4o |
+| LLM | Azure OpenAI |
 | Validation | Pydantic |
 | Embeddings | Sentence Transformers (multilingual MiniLM) |
 | Vector store | ChromaDB |
@@ -258,7 +258,7 @@ docker-compose logs stage2
 | No chunks produced (Stage 3) | Empty `original_content` in extracted data | Check `extracted_data.json` — rerun Stage 2 |
 | 0 vectors stored (Stage 4) | `chunks.json` is empty | Rerun Stage 3, then Stage 4 |
 | Retrieval returns nothing | ChromaDB collection is empty | Confirm Stage 4 completed; check `embedding_summary.json` |
-| Azure OpenAI errors | Wrong key / endpoint / deployment | Re-check `.env` values |
+| LLM API errors | Wrong key / endpoint / deployment | Re-check `.env` values |
 | Dashboard won't start | Missing dependencies | `pip install -r requirements.txt` and activate venv |
 | Docker stage fails | Missing `.env` or empty `data/pdfs/` | Add `.env` file and at least one PDF |
 | Docker build fails | Network or pip issue | Run `docker-compose build --no-cache` |
