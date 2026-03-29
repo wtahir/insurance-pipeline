@@ -9,3 +9,8 @@ loguru
 reportlab>=4.0.0
 celery>=5.6.2
 redis==7.3.0
+
+# UI Dashboard
+streamlit>=1.30.0
+plotly>=5.18.0
+pandas>=2.0.0
