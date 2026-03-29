@@ -25,7 +25,7 @@ I hit some bugs while creating this pipeline. I found out that because of the ov
 From the project root:
 
 ```bash
-cd /home/waqas/Documents/projects/insurance-pipeline
+cd ~/projects/insurance-pipeline
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
