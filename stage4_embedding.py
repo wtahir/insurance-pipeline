@@ -14,7 +14,7 @@ import logging
 from datetime import datetime
 import chromadb
 from chromadb.utils import embedding_functions
-from config import INGESTED_DATA, OUTPUT_FOLDER
+from config import CHUNKS_DATA, OUTPUT_FOLDER
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -136,7 +136,7 @@ def embed_and_store(chunks: list[dict]):
 
 
 def embed_all():
-    input_path = INGESTED_DATA
+    input_path = CHUNKS_DATA
 
     if not os.path.exists(input_path):
         raise FileNotFoundError("chunks.json not found. Run Stage 3 first.")

@@ -164,8 +164,7 @@ Answer based only on the context above:"""
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": user_message}
         ],
-        temperature=0,
-        max_tokens=1000
+        max_completion_tokens=1000
     )
 
     return response.choices[0].message.content.strip()

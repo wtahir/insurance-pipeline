@@ -9,7 +9,7 @@ import os
 import json
 import logging
 from datetime import datetime
-from config import INGESTED_DATA, OUTPUT_FOLDER
+from config import EXTRACTED_DATA, OUTPUT_FOLDER
 
 os.makedirs("logs", exist_ok=True)
 os.makedirs("data/output", exist_ok=True)
@@ -161,7 +161,7 @@ def chunk_document(document: dict) -> list[dict]:
 
 
 def chunk_all():
-    input_path = INGESTED_DATA
+    input_path = EXTRACTED_DATA
 
     if not os.path.exists(input_path):
         raise FileNotFoundError("extracted_data.json not found. Run Stage 2 first.")

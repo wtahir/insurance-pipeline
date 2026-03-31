@@ -205,8 +205,7 @@ def extract_document(document: dict) -> dict:
         response = client.chat.completions.create(
             model=DEPLOYMENT_NAME,
             messages=[{"role": "user", "content": prompt}],
-            temperature=0,        # Zero temperature = deterministic output, better for structured extraction
-            max_tokens=1000
+            max_completion_tokens=1000
         )
 
         raw_text = response.choices[0].message.content.strip()

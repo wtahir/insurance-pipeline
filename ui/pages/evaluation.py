@@ -246,10 +246,12 @@ def render():
             # Summary table
             table_data = []
             for q in scored_queries:
+                ret_score = q.get("retrieval_score")
+                ans_score = q.get("answer_score")
                 table_data.append({
                     "Query": q.get("query", "")[:60] + "..." if len(q.get("query", "")) > 60 else q.get("query", ""),
-                    "Retrieval": q.get("retrieval_score", "—"),
-                    "Answer": q.get("answer_score", "—"),
+                    "Retrieval": str(ret_score) if ret_score is not None else "—",
+                    "Answer": str(ans_score) if ans_score is not None else "—",
                     "Failure": q.get("failure_type", "—"),
                     "Avg Dist": f"{q.get('avg_distance', 0):.3f}" if q.get("avg_distance") else "—",
                     "Chunks": q.get("chunks_retrieved", 0),
