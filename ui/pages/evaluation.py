@@ -10,6 +10,7 @@ import json
 import os
 
 from ui.components.theme import inject_css
+from ui.components.runtime import is_demo_mode
 from ui.components.widgets import (
     render_hero,
     render_kpi_row,
@@ -20,6 +21,7 @@ from ui.components.widgets import (
 
 def render():
     inject_css()
+    demo_mode = is_demo_mode()
 
     render_hero(
         title="Evaluation Dashboard",
@@ -344,15 +346,21 @@ def render():
     eval_cols = st.columns([2, 1])
 
     with eval_cols[0]:
-        st.markdown("""
-        Run GPT-4o-as-judge to evaluate all pending queries from the query log.
-        This scores both retrieval quality and answer quality on a 1–5 scale.
+        if demo_mode:
+            st.markdown("""
+            Demo mode is active. Evaluation execution is disabled on hosted deployments.
+            The charts above are rendered from precomputed evaluation artifacts.
+            """)
+        else:
+            st.markdown("""
+            Run GPT-4o-as-judge to evaluate all pending queries from the query log.
+            This scores both retrieval quality and answer quality on a 1–5 scale.
 
-        **Cost:** ~0.01–0.03 USD per query (GPT-4o input + output tokens)
-        """)
+            **Cost:** ~0.01–0.03 USD per query (GPT-4o input + output tokens)
+            """)
 
     with eval_cols[1]:
-        if st.button("Run Evaluation", type="primary"):
+        if st.button("Run Evaluation", type="primary", disabled=demo_mode):
             with st.spinner("🔍 Evaluating queries with GPT-4o..."):
                 try:
                     from stage6_evaluation import evaluate_all

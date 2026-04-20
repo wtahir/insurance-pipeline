@@ -12,6 +12,14 @@ data/raw/
 # Vector store
 chroma_db/
 
+# Demo-ready synthetic artifacts (safe to publish)
+!data/pdfs/
+!data/pdfs/*.pdf
+!data/output/
+!data/output/*.json
+!chroma_db/
+!chroma_db/**
+
 # Logs
 logs/
 

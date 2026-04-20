@@ -7,6 +7,7 @@ the pipeline runs automatically through Stages 1-4.
 import streamlit as st
 import os
 from ui.components.theme import inject_css
+from ui.components.runtime import is_demo_mode
 from ui.components.widgets import (
     render_hero,
     render_pipeline_flow,
@@ -31,6 +32,7 @@ def _get_upload_fingerprint(files):
 
 def render():
     inject_css()
+    demo_mode = is_demo_mode()
 
     # ─── Hero ─────────────────────────────────────────────
     render_hero(
@@ -49,46 +51,52 @@ def render():
     # ─── Upload Section ──────────────────────────────────
     st.markdown("### Upload Documents")
 
-    uploaded_files = st.file_uploader(
-        "Drag and drop PDF files here, or click to browse",
-        type=["pdf"],
-        accept_multiple_files=True,
-        label_visibility="visible",
-    )
+    if demo_mode:
+        st.info(
+            "Demo mode is active. Upload and pipeline execution are disabled for stability on shared deployments. "
+            "Use **Document Explorer**, **Query Interface**, and **Evaluation** to explore the preloaded sample dataset."
+        )
+    else:
+        uploaded_files = st.file_uploader(
+            "Drag and drop PDF files here, or click to browse",
+            type=["pdf"],
+            accept_multiple_files=True,
+            label_visibility="visible",
+        )
 
-    if uploaded_files:
-        fingerprint = _get_upload_fingerprint(uploaded_files)
+        if uploaded_files:
+            fingerprint = _get_upload_fingerprint(uploaded_files)
 
-        # Only run pipeline if this is a NEW upload (not a re-render)
-        if fingerprint != st.session_state.last_upload_fingerprint:
-            # Save files to data/pdfs/
-            os.makedirs(PDF_DIR, exist_ok=True)
-            saved_names = []
-            for uf in uploaded_files:
-                dest = os.path.join(PDF_DIR, uf.name)
-                with open(dest, "wb") as f:
-                    f.write(uf.getbuffer())
-                saved_names.append(uf.name)
+            # Only run pipeline if this is a NEW upload (not a re-render)
+            if fingerprint != st.session_state.last_upload_fingerprint:
+                # Save files to data/pdfs/
+                os.makedirs(PDF_DIR, exist_ok=True)
+                saved_names = []
+                for uf in uploaded_files:
+                    dest = os.path.join(PDF_DIR, uf.name)
+                    with open(dest, "wb") as f:
+                        f.write(uf.getbuffer())
+                    saved_names.append(uf.name)
 
-            st.success(f"{len(saved_names)} file(s) saved: {', '.join(saved_names)}")
+                st.success(f"{len(saved_names)} file(s) saved: {', '.join(saved_names)}")
 
-            # Auto-run pipeline (Stages 1-4)
-            st.markdown("---")
-            st.markdown("**Running pipeline automatically...**")
+                # Auto-run pipeline (Stages 1-4)
+                st.markdown("---")
+                st.markdown("**Running pipeline automatically...**")
 
-            success = auto_run_pipeline()
-            st.session_state.last_upload_fingerprint = fingerprint
-            st.session_state.pipeline_completed = success
+                success = auto_run_pipeline()
+                st.session_state.last_upload_fingerprint = fingerprint
+                st.session_state.pipeline_completed = success
 
-            if success:
-                st.info(
-                    "Pipeline complete. Use the sidebar to navigate to "
-                    "**Query Interface** or **Document Explorer**."
-                )
-        else:
-            # Already processed these files — just show status
-            if st.session_state.pipeline_completed:
-                st.info("These documents have already been processed. Use the sidebar to navigate.")
+                if success:
+                    st.info(
+                        "Pipeline complete. Use the sidebar to navigate to "
+                        "**Query Interface** or **Document Explorer**."
+                    )
+            else:
+                # Already processed these files — just show status
+                if st.session_state.pipeline_completed:
+                    st.info("These documents have already been processed. Use the sidebar to navigate.")
 
     st.markdown("<br>", unsafe_allow_html=True)
 

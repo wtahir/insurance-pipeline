@@ -1,0 +1,10 @@
+{
+  "run_at": "2026-04-20T17:51:47.194919",
+  "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+  "chunks_processed": 105,
+  "chunks_stored": 105,
+  "chunks_failed": 0,
+  "total_vectors_in_collection": 105,
+  "duration_seconds": 5.92,
+  "chunks_per_second": 17.7
+}

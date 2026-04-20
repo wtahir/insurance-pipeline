@@ -122,10 +122,38 @@ python stage6_evaluation.py
 ### Option C: Streamlit Dashboard
 
 ```bash
-streamlit run ui/app.py
+streamlit run streamlit_app.py
 ```
 
-Then open **http://localhost:8501** — upload PDFs through the UI and the pipeline runs automatically.
+Then open **http://localhost:8501** — in local mode you can upload PDFs and run the pipeline from the UI.
+
+### Option D: Streamlit Cloud (Demo-ready public link)
+
+Deploy this same repository to Streamlit Cloud using:
+
+- **Main file path:** `streamlit_app.py`
+- **Branch:** `master` (or your deployment branch)
+
+In Streamlit Cloud **Secrets**, set:
+
+```toml
+DEMO_MODE = "true"
+```
+
+With `DEMO_MODE=true`, the app becomes read-only and stable for business demos:
+
+- Upload + pipeline execution disabled (prevents OOM and Chroma write/index issues)
+- Live query generation disabled (uses precomputed sample query results)
+- Evaluation execution disabled (shows precomputed analytics)
+- Document Explorer, KPI pages, sample queries, and charts remain fully browsable
+
+Important for Streamlit Cloud: commit these synthetic demo artifacts to GitHub so the hosted app has data at startup:
+
+- `data/pdfs/*.pdf`
+- `data/output/*.json`
+- `chroma_db/*`
+
+You can keep your current local workflow for full processing (`DEMO_MODE=false` / unset).
 
 ---
 
@@ -186,9 +214,11 @@ insurance-pipeline/
 ├── tasks.py                    # Celery task wrappers for parallel processing
 ├── celery_app.py               # Celery + Redis configuration
 ├── generate_synthetic_data.py  # Generate 90 realistic German claim PDFs
+├── streamlit_app.py            # Streamlit Cloud entrypoint
 │
 ├── ui/                         # Streamlit dashboard
 │   ├── app.py                  # Main entry point
+│   ├── components/runtime.py   # DEMO_MODE detection (env + Streamlit secrets)
 │   ├── pages/                  # Overview, Explorer, Query, Evaluation
 │   └── components/             # Theme, widgets, helpers
 │

@@ -1,0 +1,902 @@
+[
+  {
+    "file_name": "claim_20243725010_76336936.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20243725010_76336936.pdf",
+    "total_pages": 3,
+    "failed_pages": [],
+    "pages_extracted": 3,
+    "content": "Email received on: 10-Sep-2024 00:00:00.00 CEST\nSubject: Rechnung SYN-2025-6559632-20656683\nFrom: um\u00fcller@icloud.com\nTo: Schaden (duden)\nCc:\nAttachments: Rechnung_SYN-2025-6559632-20656683.pdf\nSehr geehrte Damen und Herren,\nanbei erhalten Sie die Rechnung f\u00fcr die Schadenbehebung zur Schadennummer SYN-2025-6559632-20656683.\nRechnungsbetrag: 7.506 EUR\nSchadendatum: 21.08.2024\nPolizzennummer: FAKE-A89931-2197\nIch bitte um \u00dcberweisung des Betrages auf mein Konto.\nMit freundlichen Gr\u00fc\u00dfen,\nUrsula M\u00fcller\nIBAN: AT00 0000 0000 1353 3457\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:17.085200",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20247869165_44632635.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20247869165_44632635.pdf",
+    "total_pages": 1,
+    "failed_pages": [],
+    "pages_extracted": 1,
+    "content": "Email received on: 14-May-2025 00:00:00.00 CEST\nSubject: SYN-2025-3108878-45956601\nFrom: andreafischer@outlook.com\nTo: Schaden (duden)\nCc:\nAttachments: Leckortung.pdf\nSehr geehrte Damen und Herren,\nanbei \u00fcbermittle ich Ihnen die Schadenmeldung bez\u00fcglich meiner Polizze FAKE-B42061-9819.\nSchadenart: Leitungswasser\nSchadendatum: 16.04.2025\nWasserrohrbruch im Badezimmer hat zu erheblichen Sch\u00e4den an der Bausubstanz gef\u00fchrt.\nIch bitte um rasche Bearbeitung meines Anliegens.\nMit freundlichen Gr\u00fc\u00dfen,\nAndrea Fischer\nTel: +43 626 8890840",
+    "ingested_at": "2026-04-20T17:51:17.158805",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20243205923_45950426.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20243205923_45950426.pdf",
+    "total_pages": 1,
+    "failed_pages": [],
+    "pages_extracted": 1,
+    "content": "Email received on: 11-May-2025 00:00:00.00 CEST\nSubject: SYN-2024-3102986-69505309\nFrom: mbecker@icloud.com\nTo: Schaden (duden)\nCc:\nAttachments: Schadenfotos.jpg\nSehr geehrte Damen und Herren,\nanbei \u00fcbermittle ich Ihnen die Schadenmeldung bez\u00fcglich meiner Polizze FAKE-C44391-5110.\nSchadenart: Elementarschaden\nSchadendatum: 19.04.2025\nHagel hat das Dach und die Fassade besch\u00e4digt.\nIch bitte um rasche Bearbeitung meines Anliegens.\nMit freundlichen Gr\u00fc\u00dfen,\nMichael Becker\nTel: +43 699 7395838",
+    "ingested_at": "2026-04-20T17:51:17.212324",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20256063499_48159191.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20256063499_48159191.pdf",
+    "total_pages": 5,
+    "failed_pages": [],
+    "pages_extracted": 5,
+    "content": "Email received on: 27-Aug-2025 00:00:00.00 CEST\nSubject: SYN-2024-8398382-69710979\nFrom: mariabecker@outlook.com\nTo: Schaden (duden)\nCc:\nAttachments: Kostenvoranschlag.pdf\nSehr geehrte Damen und Herren,\nanbei \u00fcbermittle ich Ihnen die Schadenmeldung bez\u00fcglich meiner Polizze FAKE-D94018-4588.\nSchadenart: Leitungswasser\nSchadendatum: 04.08.2025\nEin geplatztes Rohr hat den Keller \u00fcberflutet und den Bodenbelag besch\u00e4digt.\nIch bitte um rasche Bearbeitung meines Anliegens.\nMit freundlichen Gr\u00fc\u00dfen,\nMaria Becker\nTel: +43 660 7372791\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 3 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 4 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:17.282899",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20246162392_44649680.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20246162392_44649680.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 11-May-2025 00:00:00.00 CEST\nSubject: SYN-2024-7798164-32975820\nFrom: mschwarz@icloud.com\nTo: Schaden (duden)\nCc:\nAttachments: Kostenvoranschlag.pdf\nSehr geehrte Damen und Herren,\nanbei \u00fcbermittle ich Ihnen die Schadenmeldung bez\u00fcglich meiner Polizze FAKE-C79733-8549.\nSchadenart: Glasbruch\nSchadendatum: 15.04.2025\nGlast\u00fcr durch Sturm eingedr\u00fcckt.\nIch bitte um rasche Bearbeitung meines Anliegens.\nMit freundlichen Gr\u00fc\u00dfen,\nMaria Schwarz\nTel: +43 601 5190353\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:17.315699",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20254082911_23347455.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20254082911_23347455.pdf",
+    "total_pages": 1,
+    "failed_pages": [],
+    "pages_extracted": 1,
+    "content": "Email received on: 08-Nov-2024 00:00:00.00 CEST\nSubject: AW: SYN-2024-4472548-73246827\nFrom: eweber@icloud.com\nTo: Schaden (duden)\nCc:\nAttachments: Kostenvoranschlag.pdf\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2024-4472548-73246827 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nDurch austretendes Leitungswasser wurden Decke und W\u00e4nde besch\u00e4digt.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nElisabeth Weber",
+    "ingested_at": "2026-04-20T17:51:17.340747",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20247987225_55726342.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20247987225_55726342.pdf",
+    "total_pages": 1,
+    "failed_pages": [],
+    "pages_extracted": 1,
+    "content": "Email received on: 26-Jun-2025 00:00:00.00 CEST\nSubject: AW: SYN-2024-4182994-63747105\nFrom: stefanberger@outlook.com\nTo: Schaden (duden)\nCc:\nAttachments: Schadenfotos.jpg\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2024-4182994-63747105 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nHagel hat das Dach und die Fassade besch\u00e4digt.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nStefan Berger",
+    "ingested_at": "2026-04-20T17:51:17.362693",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20255084683_46441508.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20255084683_46441508.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 05-Jan-2025 00:00:00.00 CEST\nSubject: Rechnung SYN-2024-3239062-94768996\nFrom: ingrid.leitner@gmail.com\nTo: Schaden (duden)\nCc:\nAttachments: Rechnung_SYN-2024-3239062-94768996.pdf\nSehr geehrte Damen und Herren,\nanbei erhalten Sie die Rechnung f\u00fcr die Schadenbehebung zur Schadennummer SYN-2024-3239062-94768996.\nRechnungsbetrag: 7.458 EUR\nSchadendatum: 24.12.2024\nPolizzennummer: FAKE-A62542-5688\nIch bitte um \u00dcberweisung des Betrages auf mein Konto.\nMit freundlichen Gr\u00fc\u00dfen,\nIngrid Leitner\nIBAN: AT00 0000 0000 1489 4171\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:17.390333",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20241529407_67637532.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20241529407_67637532.pdf",
+    "total_pages": 3,
+    "failed_pages": [],
+    "pages_extracted": 3,
+    "content": "Email received on: 29-May-2025 00:00:00.00 CEST\nSubject: SYN-2025-5304747-92626697\nFrom: schaden@duden.at\nTo: peter.weber@gmail.com\nCc:\nAttachments:\nSehr geehrte/r Peter Weber,\nvielen Dank f\u00fcr Ihre Schadenmeldung zur Schadennummer SYN-2025-5304747-92626697.\nUm Ihren Schaden bearbeiten zu k\u00f6nnen, ben\u00f6tigen wir folgende Unterlagen:\n? Fotos des Schadens\n? Kostenvoranschlag des Glasers\n? Rechnung\nBitte senden Sie uns diese Dokumente so bald wie m\u00f6glich zu.\nMit freundlichen Gr\u00fc\u00dfen,\nSchadenabteilung duden \u00d6sterreich\nschaden@duden.at\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:17.426714",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20259743811_69941930.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20259743811_69941930.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 10-Jun-2025 00:00:00.00 CEST\nSubject: SYN-2024-8557546-31776267\nFrom: monikaleitner@outlook.com\nTo: Schaden (duden)\nCc:\nAttachments: Kostenvoranschlag.pdf\nSehr geehrte Damen und Herren,\nanbei \u00fcbermittle ich Ihnen die Schadenmeldung bez\u00fcglich meiner Polizze FAKE-B31914-8397.\nSchadenart: Glasbruch\nSchadendatum: 26.05.2025\nTerrassenfenster durch herabfallenden Ast gebrochen.\nIch bitte um rasche Bearbeitung meines Anliegens.\nMit freundlichen Gr\u00fc\u00dfen,\nMonika Leitner\nTel: +43 694 2299561\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:17.467002",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20254438434_97737203.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20254438434_97737203.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 16-Jun-2024 00:00:00.00 CEST\nSubject: SYN-2024-1796757-67358986\nFrom: kfz-schaden@duden.at\nTo: andrea.huber@gmail.com\nCc:\nAttachments:\nSehr geehrte/r Andrea Huber,\nvielen Dank f\u00fcr Ihre Schadenmeldung zur Schadennummer SYN-2024-1796757-67358986.\nUm Ihren Schaden bearbeiten zu k\u00f6nnen, ben\u00f6tigen wir folgende Unterlagen:\n? Leckortungsprotokoll\n? Fotos des Schadens\n? Kostenvoranschlag der Reparatur\n? Rechnung des Installateurs\nBitte senden Sie uns diese Dokumente so bald wie m\u00f6glich zu.\nMit freundlichen Gr\u00fc\u00dfen,\nSchadenabteilung duden \u00d6sterreich\nkfz-schaden@duden.at\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:17.511630",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20244916236_65878529.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20244916236_65878529.pdf",
+    "total_pages": 3,
+    "failed_pages": [],
+    "pages_extracted": 3,
+    "content": "Email received on: 30-Jan-2024 00:00:00.00 CEST\nSubject: Rechnung SYN-2025-9214062-38793960\nFrom: klaus.leitner@gmail.com\nTo: Schaden (duden)\nCc:\nAttachments: Rechnung_SYN-2025-9214062-38793960.pdf\nSehr geehrte Damen und Herren,\nanbei erhalten Sie die Rechnung f\u00fcr die Schadenbehebung zur Schadennummer SYN-2025-9214062-38793960.\nRechnungsbetrag: 1.510 EUR\nSchadendatum: 09.01.2024\nPolizzennummer: FAKE-A18516-8785\nIch bitte um \u00dcberweisung des Betrages auf mein Konto.\nMit freundlichen Gr\u00fc\u00dfen,\nKlaus Leitner\nIBAN: AT00 0000 0000 2715 2904\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:17.566609",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20255234371_96242714.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20255234371_96242714.pdf",
+    "total_pages": 3,
+    "failed_pages": [],
+    "pages_extracted": 3,
+    "content": "Email received on: 30-Jun-2024 00:00:00.00 CEST\nSubject: SYN-2024-7463145-56347626\nFrom: klausbauer@outlook.com\nTo: Schaden (duden)\nCc:\nAttachments: Kostenvoranschlag.pdf\nSehr geehrte Damen und Herren,\nanbei \u00fcbermittle ich Ihnen die Schadenmeldung bez\u00fcglich meiner Polizze FAKE-D82423-1968.\nSchadenart: Leitungswasser\nSchadendatum: 18.06.2024\nEin geplatztes Rohr hat den Keller \u00fcberflutet und den Bodenbelag besch\u00e4digt.\nIch bitte um rasche Bearbeitung meines Anliegens.\nMit freundlichen Gr\u00fc\u00dfen,\nKlaus Bauer\nTel: +43 631 8414419\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:17.613422",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20249405566_49672765.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20249405566_49672765.pdf",
+    "total_pages": 1,
+    "failed_pages": [],
+    "pages_extracted": 1,
+    "content": "Email received on: 09-Jul-2025 00:00:00.00 CEST\nSubject: AW: SYN-2025-2961123-47308380\nFrom: monikafischer@outlook.com\nTo: Schaden (duden)\nCc:\nAttachments: Kostenvoranschlag.pdf\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2025-2961123-47308380 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nUmgest\u00fcrzter Baum hat das Carport besch\u00e4digt.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nMonika Fischer",
+    "ingested_at": "2026-04-20T17:51:17.643372",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20256519027_19156319.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20256519027_19156319.pdf",
+    "total_pages": 5,
+    "failed_pages": [],
+    "pages_extracted": 5,
+    "content": "Email received on: 28-Apr-2024 00:00:00.00 CEST\nSubject: AW: SYN-2024-8822344-87725586\nFrom: elisabeth.weber@gmail.com\nTo: Schaden (duden)\nCc:\nAttachments: Foto_Glasbruch.jpg\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2024-8822344-87725586 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nGlast\u00fcr durch Sturm eingedr\u00fcckt.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nElisabeth Weber\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 3 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 4 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:17.706099",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20256029535_43559181.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20256029535_43559181.pdf",
+    "total_pages": 3,
+    "failed_pages": [],
+    "pages_extracted": 3,
+    "content": "Email received on: 03-Apr-2025 00:00:00.00 CEST\nSubject: AW: SYN-2025-8509390-82790498\nFrom: andrea.huber@gmx.at\nTo: Schaden (duden)\nCc:\nAttachments: Polizeianzeige.pdf\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2025-8509390-82790498 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nAufgebrochene Terrassent\u00fcr, Bargeld und Schmuck entwendet.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nAndrea Huber\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:17.754809",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20256912848_49690201.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20256912848_49690201.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 02-Feb-2025 00:00:00.00 CEST\nSubject: Rechnung SYN-2024-1570237-81654431\nFrom: ingridmaier@outlook.com\nTo: Schaden (duden)\nCc:\nAttachments: Rechnung_SYN-2024-1570237-81654431.pdf\nSehr geehrte Damen und Herren,\nanbei erhalten Sie die Rechnung f\u00fcr die Schadenbehebung zur Schadennummer SYN-2024-1570237-81654431.\nRechnungsbetrag: 8.393 EUR\nSchadendatum: 16.01.2025\nPolizzennummer: FAKE-D59348-2390\nIch bitte um \u00dcberweisung des Betrages auf mein Konto.\nMit freundlichen Gr\u00fc\u00dfen,\nIngrid Maier\nIBAN: AT00 0000 0000 3669 1265\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:17.793909",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20253939490_43222913.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20253939490_43222913.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 30-Nov-2024 00:00:00.00 CEST\nSubject: Rechnung SYN-2025-5327801-15285120\nFrom: pwagner@icloud.com\nTo: Schaden (duden)\nCc:\nAttachments: Rechnung_SYN-2025-5327801-15285120.pdf\nSehr geehrte Damen und Herren,\nanbei erhalten Sie die Rechnung f\u00fcr die Schadenbehebung zur Schadennummer SYN-2025-5327801-15285120.\nRechnungsbetrag: 14.027 EUR\nSchadendatum: 03.11.2024\nPolizzennummer: FAKE-B52905-2981\nIch bitte um \u00dcberweisung des Betrages auf mein Konto.\nMit freundlichen Gr\u00fc\u00dfen,\nPeter Wagner\nIBAN: AT00 0000 0000 2072 7659\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:17.841253",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20245311277_93318602.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20245311277_93318602.pdf",
+    "total_pages": 3,
+    "failed_pages": [],
+    "pages_extracted": 3,
+    "content": "Email received on: 30-Oct-2024 00:00:00.00 CEST\nSubject: Rechnung SYN-2024-3524353-21642585\nFrom: stefanhoffmann@outlook.com\nTo: Schaden (duden)\nCc:\nAttachments: Rechnung_SYN-2024-3524353-21642585.pdf\nSehr geehrte Damen und Herren,\nanbei erhalten Sie die Rechnung f\u00fcr die Schadenbehebung zur Schadennummer SYN-2024-3524353-21642585.\nRechnungsbetrag: 10.875 EUR\nSchadendatum: 21.10.2024\nPolizzennummer: FAKE-D64089-1744\nIch bitte um \u00dcberweisung des Betrages auf mein Konto.\nMit freundlichen Gr\u00fc\u00dfen,\nStefan Hoffmann\nIBAN: AT00 0000 0000 6112 7870\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:17.891361",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20251464782_54794506.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20251464782_54794506.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 05-Oct-2025 00:00:00.00 CEST\nSubject: AW: SYN-2025-2314585-21417060\nFrom: ingrid.hoffmann@gmail.com\nTo: Schaden (duden)\nCc:\nAttachments: Kostenvoranschlag.pdf\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2025-2314585-21417060 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nUmgest\u00fcrzter Baum hat das Carport besch\u00e4digt.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nIngrid Hoffmann\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:17.925573",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20249475478_86691029.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20249475478_86691029.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 18-May-2025 00:00:00.00 CEST\nSubject: SYN-2025-4657159-94497852\nFrom: schaden@duden.at\nTo: christian.becker@gmx.at\nCc:\nAttachments:\nSehr geehrte/r Christian Becker,\nvielen Dank f\u00fcr Ihre Schadenmeldung zur Schadennummer SYN-2025-4657159-94497852.\nUm Ihren Schaden bearbeiten zu k\u00f6nnen, ben\u00f6tigen wir folgende Unterlagen:\n? Fotos des Schadens\n? Kostenvoranschlag des Glasers\n? Rechnung\nBitte senden Sie uns diese Dokumente so bald wie m\u00f6glich zu.\nMit freundlichen Gr\u00fc\u00dfen,\nSchadenabteilung duden \u00d6sterreich\nschaden@duden.at\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:17.969798",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20259503098_91920110.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20259503098_91920110.pdf",
+    "total_pages": 3,
+    "failed_pages": [],
+    "pages_extracted": 3,
+    "content": "Email received on: 13-Apr-2025 00:00:00.00 CEST\nSubject: AW: SYN-2024-5920551-64477366\nFrom: christian.fischer@gmx.at\nTo: Schaden (duden)\nCc:\nAttachments: Kostenvoranschlag.pdf\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2024-5920551-64477366 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nTerrassenfenster durch herabfallenden Ast gebrochen.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nChristian Fischer\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:18.014299",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20254462871_58496460.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20254462871_58496460.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 19-Jul-2025 00:00:00.00 CEST\nSubject: SYN-2024-2581308-18329547\nFrom: thomas.gruber@gmail.com\nTo: Schaden (duden)\nCc:\nAttachments: Fotos.jpg\nSehr geehrte Damen und Herren,\nanbei \u00fcbermittle ich Ihnen die Schadenmeldung bez\u00fcglich meiner Polizze FAKE-C63985-7710.\nSchadenart: Einbruchdiebstahl\nSchadendatum: 25.06.2025\nAufgebrochene Terrassent\u00fcr, Bargeld und Schmuck entwendet.\nIch bitte um rasche Bearbeitung meines Anliegens.\nMit freundlichen Gr\u00fc\u00dfen,\nThomas Gruber\nTel: +43 636 1600871\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:18.067158",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20256568743_32006590.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20256568743_32006590.pdf",
+    "total_pages": 3,
+    "failed_pages": [],
+    "pages_extracted": 3,
+    "content": "Email received on: 06-Dec-2025 00:00:00.00 CEST\nSubject: AW: SYN-2024-3709433-56761121\nFrom: christian.wagner@gmx.at\nTo: Schaden (duden)\nCc:\nAttachments: Niederschlagsnachweis.pdf\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2024-3709433-56761121 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nHagel hat das Dach und die Fassade besch\u00e4digt.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nChristian Wagner\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:18.120111",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20257497809_75787450.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20257497809_75787450.pdf",
+    "total_pages": 5,
+    "failed_pages": [],
+    "pages_extracted": 5,
+    "content": "Email received on: 15-Jul-2024 00:00:00.00 CEST\nSubject: SYN-2025-3680806-42989154\nFrom: thomasm\u00fcller@outlook.com\nTo: Schaden (duden)\nCc:\nAttachments: Schadenfotos.jpg\nSehr geehrte Damen und Herren,\nanbei \u00fcbermittle ich Ihnen die Schadenmeldung bez\u00fcglich meiner Polizze FAKE-C29352-7509.\nSchadenart: Sturmschaden\nSchadendatum: 22.06.2024\nSturmb\u00f6en haben die Terrassen\u00fcberdachung zerst\u00f6rt.\nIch bitte um rasche Bearbeitung meines Anliegens.\nMit freundlichen Gr\u00fc\u00dfen,\nThomas M\u00fcller\nTel: +43 627 4235723\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 3 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 4 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:18.319295",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20251286829_19827373.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20251286829_19827373.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 21-Oct-2024 00:00:00.00 CEST\nSubject: SYN-2025-7448182-56621115\nFrom: andreahoffmann@outlook.com\nTo: Schaden (duden)\nCc:\nAttachments: Kostenvoranschlag.pdf\nSehr geehrte Damen und Herren,\nanbei \u00fcbermittle ich Ihnen die Schadenmeldung bez\u00fcglich meiner Polizze FAKE-A39316-5496.\nSchadenart: Glasbruch\nSchadendatum: 05.10.2024\nFensterscheibe durch Steinwurf besch\u00e4digt.\nIch bitte um rasche Bearbeitung meines Anliegens.\nMit freundlichen Gr\u00fc\u00dfen,\nAndrea Hoffmann\nTel: +43 635 4097339\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:18.358725",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20243283958_70244287.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20243283958_70244287.pdf",
+    "total_pages": 5,
+    "failed_pages": [],
+    "pages_extracted": 5,
+    "content": "Email received on: 12-Apr-2025 00:00:00.00 CEST\nSubject: AW: SYN-2025-3269169-21875073\nFrom: ehoffmann@icloud.com\nTo: Schaden (duden)\nCc:\nAttachments: Schadenfotos.jpg\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2025-3269169-21875073 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nKaminbrand hat auf Dachstuhl \u00fcbergegriffen.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nElisabeth Hoffmann\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 3 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 4 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:18.416722",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20249223222_53410183.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20249223222_53410183.pdf",
+    "total_pages": 1,
+    "failed_pages": [],
+    "pages_extracted": 1,
+    "content": "Email received on: 21-Sep-2024 00:00:00.00 CEST\nSubject: AW: SYN-2025-9721914-12436537\nFrom: thomas.schmidt@gmx.at\nTo: Schaden (duden)\nCc:\nAttachments: Polizeianzeige.pdf\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2025-9721914-12436537 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nEinbruch durch Kellerfenster, mehrere Elektroger\u00e4te gestohlen.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nThomas Schmidt",
+    "ingested_at": "2026-04-20T17:51:18.446661",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20252377755_39070639.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20252377755_39070639.pdf",
+    "total_pages": 3,
+    "failed_pages": [],
+    "pages_extracted": 3,
+    "content": "Email received on: 25-Sep-2025 00:00:00.00 CEST\nSubject: Rechnung SYN-2024-6510433-42155729\nFrom: smaier@icloud.com\nTo: Schaden (duden)\nCc:\nAttachments: Rechnung_SYN-2024-6510433-42155729.pdf\nSehr geehrte Damen und Herren,\nanbei erhalten Sie die Rechnung f\u00fcr die Schadenbehebung zur Schadennummer SYN-2024-6510433-42155729.\nRechnungsbetrag: 6.873 EUR\nSchadendatum: 03.09.2025\nPolizzennummer: FAKE-D77439-8562\nIch bitte um \u00dcberweisung des Betrages auf mein Konto.\nMit freundlichen Gr\u00fc\u00dfen,\nStefan Maier\nIBAN: AT00 0000 0000 1275 2677\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:18.502328",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20241736463_71004850.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20241736463_71004850.pdf",
+    "total_pages": 8,
+    "failed_pages": [],
+    "pages_extracted": 8,
+    "content": "Email received on: 03-Feb-2025 00:00:00.00 CEST\nSubject: AW: SYN-2025-3832922-90004239\nFrom: markus.weber@gmx.at\nTo: Schaden (duden)\nCc:\nAttachments: Inventarliste.pdf\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2025-3832922-90004239 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nEinbruch durch Kellerfenster, mehrere Elektroger\u00e4te gestohlen.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nMarkus Weber\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 3 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 4 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 5 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 6 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 7 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:18.605707",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20251221402_81147522.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20251221402_81147522.pdf",
+    "total_pages": 3,
+    "failed_pages": [],
+    "pages_extracted": 3,
+    "content": "Email received on: 08-Dec-2025 00:00:00.00 CEST\nSubject: AW: SYN-2024-9515982-47654871\nFrom: sabine.schwarz@gmail.com\nTo: Schaden (duden)\nCc:\nAttachments: Feuerwehrprotokoll.pdf\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2024-9515982-47654871 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nKaminbrand hat auf Dachstuhl \u00fcbergegriffen.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nSabine Schwarz\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:18.659699",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20245129043_19253614.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20245129043_19253614.pdf",
+    "total_pages": 3,
+    "failed_pages": [],
+    "pages_extracted": 3,
+    "content": "Email received on: 09-Nov-2024 00:00:00.00 CEST\nSubject: AW: SYN-2024-8830438-98014439\nFrom: mleitner@icloud.com\nTo: Schaden (duden)\nCc:\nAttachments: Schadenfotos.jpg\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2024-8830438-98014439 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nHagel hat das Dach und die Fassade besch\u00e4digt.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nMonika Leitner\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:18.707500",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20257975702_10619392.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20257975702_10619392.pdf",
+    "total_pages": 5,
+    "failed_pages": [],
+    "pages_extracted": 5,
+    "content": "Email received on: 22-Feb-2025 00:00:00.00 CEST\nSubject: AW: SYN-2024-4278698-24910058\nFrom: ingrid.maier@gmail.com\nTo: Schaden (duden)\nCc:\nAttachments: Schadenfotos.jpg\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2024-4278698-24910058 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nUmgest\u00fcrzter Baum hat das Carport besch\u00e4digt.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nIngrid Maier\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 3 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 4 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:18.757978",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20249080594_43280118.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20249080594_43280118.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 07-Dec-2025 00:00:00.00 CEST\nSubject: SYN-2025-3418238-69505630\nFrom: monika.becker@gmx.at\nTo: Schaden (duden)\nCc:\nAttachments: Schadenfotos.jpg\nSehr geehrte Damen und Herren,\nanbei \u00fcbermittle ich Ihnen die Schadenmeldung bez\u00fcglich meiner Polizze FAKE-C11153-7949.\nSchadenart: Brandschaden\nSchadendatum: 06.12.2025\nK\u00fcchenbrand durch defektes Elektroger\u00e4t, erhebliche Ru\u00dfsch\u00e4den.\nIch bitte um rasche Bearbeitung meines Anliegens.\nMit freundlichen Gr\u00fc\u00dfen,\nMonika Becker\nTel: +43 629 9870857\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:18.788692",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20243684243_92972911.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20243684243_92972911.pdf",
+    "total_pages": 8,
+    "failed_pages": [],
+    "pages_extracted": 8,
+    "content": "Email received on: 25-Jul-2024 00:00:00.00 CEST\nSubject: SYN-2025-4848914-18712821\nFrom: elisabeth.schmidt@gmx.at\nTo: Schaden (duden)\nCc:\nAttachments: Foto_Schaden.jpg\nSehr geehrte Damen und Herren,\nanbei \u00fcbermittle ich Ihnen die Schadenmeldung bez\u00fcglich meiner Polizze FAKE-A78004-8958.\nSchadenart: Leitungswasser\nSchadendatum: 08.07.2024\nDurch austretendes Leitungswasser wurden Decke und W\u00e4nde besch\u00e4digt.\nIch bitte um rasche Bearbeitung meines Anliegens.\nMit freundlichen Gr\u00fc\u00dfen,\nElisabeth Schmidt\nTel: +43 651 7804838\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 3 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 4 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 5 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 6 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 7 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:18.846914",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20258249026_61880254.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20258249026_61880254.pdf",
+    "total_pages": 1,
+    "failed_pages": [],
+    "pages_extracted": 1,
+    "content": "Email received on: 24-Mar-2024 00:00:00.00 CEST\nSubject: SYN-2024-9840200-22140293\nFrom: kfz-schaden@duden.at\nTo: monika.steiner@gmail.com\nCc:\nAttachments:\nSehr geehrte/r Monika Steiner,\nvielen Dank f\u00fcr Ihre Schadenmeldung zur Schadennummer SYN-2024-9840200-22140293.\nUm Ihren Schaden bearbeiten zu k\u00f6nnen, ben\u00f6tigen wir folgende Unterlagen:\n? Fotos des Schadens\n? Kostenvoranschlag des Glasers\n? Rechnung\nBitte senden Sie uns diese Dokumente so bald wie m\u00f6glich zu.\nMit freundlichen Gr\u00fc\u00dfen,\nSchadenabteilung duden \u00d6sterreich\nkfz-schaden@duden.at",
+    "ingested_at": "2026-04-20T17:51:18.869442",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20249733162_19936232.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20249733162_19936232.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 17-Nov-2025 00:00:00.00 CEST\nSubject: SYN-2025-4391498-30164152\nFrom: tweber@icloud.com\nTo: Schaden (duden)\nCc:\nAttachments: Kostenvoranschlag.pdf\nSehr geehrte Damen und Herren,\nanbei \u00fcbermittle ich Ihnen die Schadenmeldung bez\u00fcglich meiner Polizze FAKE-A53690-9554.\nSchadenart: Leitungswasser\nSchadendatum: 07.11.2025\nEin geplatztes Rohr hat den Keller \u00fcberflutet und den Bodenbelag besch\u00e4digt.\nIch bitte um rasche Bearbeitung meines Anliegens.\nMit freundlichen Gr\u00fc\u00dfen,\nThomas Weber\nTel: +43 666 2968338\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:18.896463",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20259075901_51776103.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20259075901_51776103.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 21-Nov-2025 00:00:00.00 CEST\nSubject: Rechnung SYN-2024-4717237-29478843\nFrom: christian.wagner@gmail.com\nTo: Schaden (duden)\nCc:\nAttachments: Rechnung_SYN-2024-4717237-29478843.pdf\nSehr geehrte Damen und Herren,\nanbei erhalten Sie die Rechnung f\u00fcr die Schadenbehebung zur Schadennummer SYN-2024-4717237-29478843.\nRechnungsbetrag: 5.838 EUR\nSchadendatum: 22.10.2025\nPolizzennummer: FAKE-C58325-8891\nIch bitte um \u00dcberweisung des Betrages auf mein Konto.\nMit freundlichen Gr\u00fc\u00dfen,\nChristian Wagner\nIBAN: AT00 0000 0000 5602 5422\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:18.923940",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20257788799_23912274.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20257788799_23912274.pdf",
+    "total_pages": 3,
+    "failed_pages": [],
+    "pages_extracted": 3,
+    "content": "Email received on: 09-Jan-2025 00:00:00.00 CEST\nSubject: AW: SYN-2024-6159500-83527974\nFrom: elisabeth.weber@gmail.com\nTo: Schaden (duden)\nCc:\nAttachments: Leckortung.pdf\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2024-6159500-83527974 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nWasserrohrbruch im Badezimmer hat zu erheblichen Sch\u00e4den an der Bausubstanz gef\u00fchrt.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nElisabeth Weber\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:18.959140",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20252879081_70509832.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20252879081_70509832.pdf",
+    "total_pages": 5,
+    "failed_pages": [],
+    "pages_extracted": 5,
+    "content": "Email received on: 27-Jul-2025 00:00:00.00 CEST\nSubject: SYN-2024-4466928-49861462\nFrom: haushaltsschaden@duden.at\nTo: andrea.hoffmann@gmail.com\nCc:\nAttachments:\nSehr geehrte/r Andrea Hoffmann,\nvielen Dank f\u00fcr Ihre Schadenmeldung zur Schadennummer SYN-2024-4466928-49861462.\nUm Ihren Schaden bearbeiten zu k\u00f6nnen, ben\u00f6tigen wir folgende Unterlagen:\n? Fotos des Schadens\n? Niederschlagsnachweis\n? Kostenvoranschlag\n? Beh\u00f6rdliche Best\u00e4tigung\nBitte senden Sie uns diese Dokumente so bald wie m\u00f6glich zu.\nMit freundlichen Gr\u00fc\u00dfen,\nSchadenabteilung duden \u00d6sterreich\nhaushaltsschaden@duden.at\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 3 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 4 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:18.999136",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20245490051_30034514.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20245490051_30034514.pdf",
+    "total_pages": 8,
+    "failed_pages": [],
+    "pages_extracted": 8,
+    "content": "Email received on: 11-Feb-2024 00:00:00.00 CEST\nSubject: Rechnung SYN-2024-6400973-10652983\nFrom: michaelm\u00fcller@outlook.com\nTo: Schaden (duden)\nCc:\nAttachments: Rechnung_SYN-2024-6400973-10652983.pdf\nSehr geehrte Damen und Herren,\nanbei erhalten Sie die Rechnung f\u00fcr die Schadenbehebung zur Schadennummer SYN-2024-6400973-10652983.\nRechnungsbetrag: 13.750 EUR\nSchadendatum: 29.01.2024\nPolizzennummer: FAKE-A30662-7718\nIch bitte um \u00dcberweisung des Betrages auf mein Konto.\nMit freundlichen Gr\u00fc\u00dfen,\nMichael M\u00fcller\nIBAN: AT00 0000 0000 1146 5653\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 3 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 4 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 5 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 6 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 7 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:19.066114",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20247177741_19101082.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20247177741_19101082.pdf",
+    "total_pages": 3,
+    "failed_pages": [],
+    "pages_extracted": 3,
+    "content": "Email received on: 04-Dec-2024 00:00:00.00 CEST\nSubject: AW: SYN-2025-8256116-49102030\nFrom: thomas.gruber@gmx.at\nTo: Schaden (duden)\nCc:\nAttachments: Foto_Glasbruch.jpg\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2025-8256116-49102030 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nGlast\u00fcr durch Sturm eingedr\u00fcckt.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nThomas Gruber\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:19.104073",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20255330403_99268688.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20255330403_99268688.pdf",
+    "total_pages": 8,
+    "failed_pages": [],
+    "pages_extracted": 8,
+    "content": "Email received on: 19-Dec-2024 00:00:00.00 CEST\nSubject: Rechnung SYN-2025-2766709-12389300\nFrom: stefan.huber@gmail.com\nTo: Schaden (duden)\nCc:\nAttachments: Rechnung_SYN-2025-2766709-12389300.pdf\nSehr geehrte Damen und Herren,\nanbei erhalten Sie die Rechnung f\u00fcr die Schadenbehebung zur Schadennummer SYN-2025-2766709-12389300.\nRechnungsbetrag: 8.340 EUR\nSchadendatum: 18.12.2024\nPolizzennummer: FAKE-C25503-3559\nIch bitte um \u00dcberweisung des Betrages auf mein Konto.\nMit freundlichen Gr\u00fc\u00dfen,\nStefan Huber\nIBAN: AT00 0000 0000 8657 6557\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 3 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 4 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 5 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 6 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 7 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:19.179391",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20258095980_69088525.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20258095980_69088525.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 21-Dec-2024 00:00:00.00 CEST\nSubject: AW: SYN-2024-3390746-38594677\nFrom: michael.schwarz@gmx.at\nTo: Schaden (duden)\nCc:\nAttachments: Niederschlagsnachweis.pdf\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2024-3390746-38594677 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nStarkregen hat zu \u00dcberflutung des Kellers gef\u00fchrt.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nMichael Schwarz\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:19.218940",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20253231879_42724439.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20253231879_42724439.pdf",
+    "total_pages": 1,
+    "failed_pages": [],
+    "pages_extracted": 1,
+    "content": "Email received on: 08-Apr-2024 00:00:00.00 CEST\nSubject: AW: SYN-2025-3515060-87659414\nFrom: christian.huber@gmx.at\nTo: Schaden (duden)\nCc:\nAttachments: Foto_Glasbruch.jpg\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2025-3515060-87659414 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nFensterscheibe durch Steinwurf besch\u00e4digt.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nChristian Huber",
+    "ingested_at": "2026-04-20T17:51:19.249241",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20245739661_78856343.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20245739661_78856343.pdf",
+    "total_pages": 1,
+    "failed_pages": [],
+    "pages_extracted": 1,
+    "content": "Email received on: 29-Jan-2025 00:00:00.00 CEST\nSubject: AW: SYN-2024-7277331-26850228\nFrom: andrea.bauer@gmx.at\nTo: Schaden (duden)\nCc:\nAttachments: Foto_Glasbruch.jpg\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2024-7277331-26850228 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nGlast\u00fcr durch Sturm eingedr\u00fcckt.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nAndrea Bauer",
+    "ingested_at": "2026-04-20T17:51:19.273904",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20253243174_34963754.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20253243174_34963754.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 18-Nov-2025 00:00:00.00 CEST\nSubject: AW: SYN-2024-8548199-73276818\nFrom: asteiner@icloud.com\nTo: Schaden (duden)\nCc:\nAttachments: Feuerwehrprotokoll.pdf\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2024-8548199-73276818 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nK\u00fcchenbrand durch defektes Elektroger\u00e4t, erhebliche Ru\u00dfsch\u00e4den.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nAndrea Steiner\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:19.308651",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20247355869_31680081.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20247355869_31680081.pdf",
+    "total_pages": 1,
+    "failed_pages": [],
+    "pages_extracted": 1,
+    "content": "Email received on: 21-Jul-2024 00:00:00.00 CEST\nSubject: SYN-2024-7708544-37598555\nFrom: schaden@duden.at\nTo: thomas.maier@gmail.com\nCc:\nAttachments:\nSehr geehrte/r Thomas Maier,\nvielen Dank f\u00fcr Ihre Schadenmeldung zur Schadennummer SYN-2024-7708544-37598555.\nUm Ihren Schaden bearbeiten zu k\u00f6nnen, ben\u00f6tigen wir folgende Unterlagen:\n? Fotos des Schadens\n? Wetterbericht\n? Kostenvoranschlag\n? Dachdecker-Rechnung\nBitte senden Sie uns diese Dokumente so bald wie m\u00f6glich zu.\nMit freundlichen Gr\u00fc\u00dfen,\nSchadenabteilung duden \u00d6sterreich\nschaden@duden.at",
+    "ingested_at": "2026-04-20T17:51:19.468607",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20241847228_79429505.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20241847228_79429505.pdf",
+    "total_pages": 1,
+    "failed_pages": [],
+    "pages_extracted": 1,
+    "content": "Email received on: 21-May-2025 00:00:00.00 CEST\nSubject: SYN-2025-3703029-47294066\nFrom: schaden@duden.at\nTo: ursula.wagner@gmx.at\nCc:\nAttachments:\nSehr geehrte/r Ursula Wagner,\nvielen Dank f\u00fcr Ihre Schadenmeldung zur Schadennummer SYN-2025-3703029-47294066.\nUm Ihren Schaden bearbeiten zu k\u00f6nnen, ben\u00f6tigen wir folgende Unterlagen:\n? Fotos des Schadens\n? Wetterbericht\n? Kostenvoranschlag\n? Dachdecker-Rechnung\nBitte senden Sie uns diese Dokumente so bald wie m\u00f6glich zu.\nMit freundlichen Gr\u00fc\u00dfen,\nSchadenabteilung duden \u00d6sterreich\nschaden@duden.at",
+    "ingested_at": "2026-04-20T17:51:19.502683",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20243230481_87712281.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20243230481_87712281.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 23-Nov-2025 00:00:00.00 CEST\nSubject: AW: SYN-2025-8867591-45356999\nFrom: elisabethschmidt@outlook.com\nTo: Schaden (duden)\nCc:\nAttachments: Kostenvoranschlag.pdf\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2025-8867591-45356999 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nUmgest\u00fcrzter Baum hat das Carport besch\u00e4digt.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nElisabeth Schmidt\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:19.535669",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20259731272_30344781.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20259731272_30344781.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 13-Aug-2025 00:00:00.00 CEST\nSubject: SYN-2025-6604231-91550456\nFrom: schadenmeldung@duden.at\nTo: maria.huber@gmx.at\nCc:\nAttachments:\nSehr geehrte/r Maria Huber,\nvielen Dank f\u00fcr Ihre Schadenmeldung zur Schadennummer SYN-2025-6604231-91550456.\nUm Ihren Schaden bearbeiten zu k\u00f6nnen, ben\u00f6tigen wir folgende Unterlagen:\n? Feuerwehrprotokoll\n? Fotos des Schadens\n? Kostenvoranschlag\n? Liste der besch\u00e4digten Gegenst\u00e4nde\nBitte senden Sie uns diese Dokumente so bald wie m\u00f6glich zu.\nMit freundlichen Gr\u00fc\u00dfen,\nSchadenabteilung duden \u00d6sterreich\nschadenmeldung@duden.at\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:19.578738",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20253462485_15610411.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20253462485_15610411.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 12-Jan-2024 00:00:00.00 CEST\nSubject: Rechnung SYN-2024-9604709-77756347\nFrom: elisabeth.berger@gmx.at\nTo: Schaden (duden)\nCc:\nAttachments: Rechnung_SYN-2024-9604709-77756347.pdf\nSehr geehrte Damen und Herren,\nanbei erhalten Sie die Rechnung f\u00fcr die Schadenbehebung zur Schadennummer SYN-2024-9604709-77756347.\nRechnungsbetrag: 9.479 EUR\nSchadendatum: 13.12.2023\nPolizzennummer: FAKE-B27428-4784\nIch bitte um \u00dcberweisung des Betrages auf mein Konto.\nMit freundlichen Gr\u00fc\u00dfen,\nElisabeth Berger\nIBAN: AT00 0000 0000 9072 3878\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:19.614115",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20242779386_94091838.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20242779386_94091838.pdf",
+    "total_pages": 1,
+    "failed_pages": [],
+    "pages_extracted": 1,
+    "content": "Email received on: 18-Sep-2025 00:00:00.00 CEST\nSubject: SYN-2024-8861936-64744127\nFrom: msteiner@icloud.com\nTo: Schaden (duden)\nCc:\nAttachments: Kostenvoranschlag.pdf\nSehr geehrte Damen und Herren,\nanbei \u00fcbermittle ich Ihnen die Schadenmeldung bez\u00fcglich meiner Polizze FAKE-D95132-4059.\nSchadenart: Sturmschaden\nSchadendatum: 02.09.2025\nSturm hat Dachziegel abgedeckt und zu Wassereintritt gef\u00fchrt.\nIch bitte um rasche Bearbeitung meines Anliegens.\nMit freundlichen Gr\u00fc\u00dfen,\nMaria Steiner\nTel: +43 685 5277013",
+    "ingested_at": "2026-04-20T17:51:19.639916",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20253686734_19591455.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20253686734_19591455.pdf",
+    "total_pages": 1,
+    "failed_pages": [],
+    "pages_extracted": 1,
+    "content": "Email received on: 19-Feb-2024 00:00:00.00 CEST\nSubject: SYN-2024-6148666-94467958\nFrom: schadenmeldung@duden.at\nTo: sabinebecker@outlook.com\nCc:\nAttachments:\nSehr geehrte/r Sabine Becker,\nvielen Dank f\u00fcr Ihre Schadenmeldung zur Schadennummer SYN-2024-6148666-94467958.\nUm Ihren Schaden bearbeiten zu k\u00f6nnen, ben\u00f6tigen wir folgende Unterlagen:\n? Fotos des Schadens\n? Wetterbericht\n? Kostenvoranschlag\n? Dachdecker-Rechnung\nBitte senden Sie uns diese Dokumente so bald wie m\u00f6glich zu.\nMit freundlichen Gr\u00fc\u00dfen,\nSchadenabteilung duden \u00d6sterreich\nschadenmeldung@duden.at",
+    "ingested_at": "2026-04-20T17:51:19.675349",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20254491859_53370168.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20254491859_53370168.pdf",
+    "total_pages": 1,
+    "failed_pages": [],
+    "pages_extracted": 1,
+    "content": "Email received on: 27-Jun-2025 00:00:00.00 CEST\nSubject: SYN-2024-6871979-10492604\nFrom: mbecker@icloud.com\nTo: Schaden (duden)\nCc:\nAttachments: Niederschlagsnachweis.pdf\nSehr geehrte Damen und Herren,\nanbei \u00fcbermittle ich Ihnen die Schadenmeldung bez\u00fcglich meiner Polizze FAKE-B97343-3668.\nSchadenart: Elementarschaden\nSchadendatum: 15.06.2025\nHagel hat das Dach und die Fassade besch\u00e4digt.\nIch bitte um rasche Bearbeitung meines Anliegens.\nMit freundlichen Gr\u00fc\u00dfen,\nMonika Becker\nTel: +43 678 5530322",
+    "ingested_at": "2026-04-20T17:51:19.703459",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20242079466_44783155.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20242079466_44783155.pdf",
+    "total_pages": 1,
+    "failed_pages": [],
+    "pages_extracted": 1,
+    "content": "Email received on: 27-Feb-2025 00:00:00.00 CEST\nSubject: SYN-2024-4392312-54984197\nFrom: schadenmeldung@duden.at\nTo: ubecker@icloud.com\nCc:\nAttachments:\nSehr geehrte/r Ursula Becker,\nvielen Dank f\u00fcr Ihre Schadenmeldung zur Schadennummer SYN-2024-4392312-54984197.\nUm Ihren Schaden bearbeiten zu k\u00f6nnen, ben\u00f6tigen wir folgende Unterlagen:\n? Fotos des Schadens\n? Niederschlagsnachweis\n? Kostenvoranschlag\n? Beh\u00f6rdliche Best\u00e4tigung\nBitte senden Sie uns diese Dokumente so bald wie m\u00f6glich zu.\nMit freundlichen Gr\u00fc\u00dfen,\nSchadenabteilung duden \u00d6sterreich\nschadenmeldung@duden.at",
+    "ingested_at": "2026-04-20T17:51:19.737590",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20259966021_51514128.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20259966021_51514128.pdf",
+    "total_pages": 3,
+    "failed_pages": [],
+    "pages_extracted": 3,
+    "content": "Email received on: 20-Oct-2025 00:00:00.00 CEST\nSubject: SYN-2025-7526472-32114884\nFrom: haushaltsschaden@duden.at\nTo: elisabethfischer@outlook.com\nCc:\nAttachments:\nSehr geehrte/r Elisabeth Fischer,\nvielen Dank f\u00fcr Ihre Schadenmeldung zur Schadennummer SYN-2025-7526472-32114884.\nUm Ihren Schaden bearbeiten zu k\u00f6nnen, ben\u00f6tigen wir folgende Unterlagen:\n? Fotos des Schadens\n? Niederschlagsnachweis\n? Kostenvoranschlag\n? Beh\u00f6rdliche Best\u00e4tigung\nBitte senden Sie uns diese Dokumente so bald wie m\u00f6glich zu.\nMit freundlichen Gr\u00fc\u00dfen,\nSchadenabteilung duden \u00d6sterreich\nhaushaltsschaden@duden.at\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:19.780881",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20259966041_48686624.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20259966041_48686624.pdf",
+    "total_pages": 8,
+    "failed_pages": [],
+    "pages_extracted": 8,
+    "content": "Email received on: 29-Aug-2024 00:00:00.00 CEST\nSubject: SYN-2024-5478288-63792880\nFrom: kfz-schaden@duden.at\nTo: monika.bauer@gmx.at\nCc:\nAttachments:\nSehr geehrte/r Monika Bauer,\nvielen Dank f\u00fcr Ihre Schadenmeldung zur Schadennummer SYN-2024-5478288-63792880.\nUm Ihren Schaden bearbeiten zu k\u00f6nnen, ben\u00f6tigen wir folgende Unterlagen:\n? Feuerwehrprotokoll\n? Fotos des Schadens\n? Kostenvoranschlag\n? Liste der besch\u00e4digten Gegenst\u00e4nde\nBitte senden Sie uns diese Dokumente so bald wie m\u00f6glich zu.\nMit freundlichen Gr\u00fc\u00dfen,\nSchadenabteilung duden \u00d6sterreich\nkfz-schaden@duden.at\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 3 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 4 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 5 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 6 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 7 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:19.845345",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20257911152_15698091.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20257911152_15698091.pdf",
+    "total_pages": 1,
+    "failed_pages": [],
+    "pages_extracted": 1,
+    "content": "Email received on: 30-Sep-2025 00:00:00.00 CEST\nSubject: AW: SYN-2025-3742269-31285846\nFrom: monika.becker@gmx.at\nTo: Schaden (duden)\nCc:\nAttachments: Schadenfotos.jpg\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2025-3742269-31285846 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nStarkregen hat zu \u00dcberflutung des Kellers gef\u00fchrt.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nMonika Becker",
+    "ingested_at": "2026-04-20T17:51:19.864379",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20252711858_91708135.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20252711858_91708135.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 16-Dec-2024 00:00:00.00 CEST\nSubject: SYN-2024-5886214-90094580\nFrom: michael.fischer@gmail.com\nTo: Schaden (duden)\nCc:\nAttachments: Niederschlagsnachweis.pdf\nSehr geehrte Damen und Herren,\nanbei \u00fcbermittle ich Ihnen die Schadenmeldung bez\u00fcglich meiner Polizze FAKE-C81987-3812.\nSchadenart: Elementarschaden\nSchadendatum: 23.11.2024\nStarkregen hat zu \u00dcberflutung des Kellers gef\u00fchrt.\nIch bitte um rasche Bearbeitung meines Anliegens.\nMit freundlichen Gr\u00fc\u00dfen,\nMichael Fischer\nTel: +43 683 8806550\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:19.892418",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20254918361_84733908.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20254918361_84733908.pdf",
+    "total_pages": 3,
+    "failed_pages": [],
+    "pages_extracted": 3,
+    "content": "Email received on: 26-May-2024 00:00:00.00 CEST\nSubject: Rechnung SYN-2024-4613113-38032777\nFrom: maria.huber@gmail.com\nTo: Schaden (duden)\nCc:\nAttachments: Rechnung_SYN-2024-4613113-38032777.pdf\nSehr geehrte Damen und Herren,\nanbei erhalten Sie die Rechnung f\u00fcr die Schadenbehebung zur Schadennummer SYN-2024-4613113-38032777.\nRechnungsbetrag: 14.027 EUR\nSchadendatum: 03.05.2024\nPolizzennummer: FAKE-D29605-4909\nIch bitte um \u00dcberweisung des Betrages auf mein Konto.\nMit freundlichen Gr\u00fc\u00dfen,\nMaria Huber\nIBAN: AT00 0000 0000 8448 4435\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:19.923872",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20243187118_71149802.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20243187118_71149802.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 26-Oct-2025 00:00:00.00 CEST\nSubject: Rechnung SYN-2025-3850012-50875289\nFrom: stefan.gruber@gmx.at\nTo: Schaden (duden)\nCc:\nAttachments: Rechnung_SYN-2025-3850012-50875289.pdf\nSehr geehrte Damen und Herren,\nanbei erhalten Sie die Rechnung f\u00fcr die Schadenbehebung zur Schadennummer SYN-2025-3850012-50875289.\nRechnungsbetrag: 12.933 EUR\nSchadendatum: 10.10.2025\nPolizzennummer: FAKE-B40638-1987\nIch bitte um \u00dcberweisung des Betrages auf mein Konto.\nMit freundlichen Gr\u00fc\u00dfen,\nStefan Gruber\nIBAN: AT00 0000 0000 4692 7931\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:19.953313",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20254815595_63936476.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20254815595_63936476.pdf",
+    "total_pages": 5,
+    "failed_pages": [],
+    "pages_extracted": 5,
+    "content": "Email received on: 12-Oct-2025 00:00:00.00 CEST\nSubject: SYN-2025-3895153-45182807\nFrom: schadenmeldung@duden.at\nTo: ischwarz@icloud.com\nCc:\nAttachments:\nSehr geehrte/r Ingrid Schwarz,\nvielen Dank f\u00fcr Ihre Schadenmeldung zur Schadennummer SYN-2025-3895153-45182807.\nUm Ihren Schaden bearbeiten zu k\u00f6nnen, ben\u00f6tigen wir folgende Unterlagen:\n? Leckortungsprotokoll\n? Fotos des Schadens\n? Kostenvoranschlag der Reparatur\n? Rechnung des Installateurs\nBitte senden Sie uns diese Dokumente so bald wie m\u00f6glich zu.\nMit freundlichen Gr\u00fc\u00dfen,\nSchadenabteilung duden \u00d6sterreich\nschadenmeldung@duden.at\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 3 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 4 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:19.992302",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20256272798_60678616.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20256272798_60678616.pdf",
+    "total_pages": 5,
+    "failed_pages": [],
+    "pages_extracted": 5,
+    "content": "Email received on: 19-Aug-2025 00:00:00.00 CEST\nSubject: SYN-2024-7920208-72763737\nFrom: schadenmeldung@duden.at\nTo: sabinewagner@outlook.com\nCc:\nAttachments:\nSehr geehrte/r Sabine Wagner,\nvielen Dank f\u00fcr Ihre Schadenmeldung zur Schadennummer SYN-2024-7920208-72763737.\nUm Ihren Schaden bearbeiten zu k\u00f6nnen, ben\u00f6tigen wir folgende Unterlagen:\n? Polizeianzeige\n? Inventarliste der gestohlenen Gegenst\u00e4nde\n? Fotos der Einbruchspuren\n? Kaufbelege der entwendeten Gegenst\u00e4nde\nBitte senden Sie uns diese Dokumente so bald wie m\u00f6glich zu.\nMit freundlichen Gr\u00fc\u00dfen,\nSchadenabteilung duden \u00d6sterreich\nschadenmeldung@duden.at\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 3 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 4 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:20.036854",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20249009293_42970224.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20249009293_42970224.pdf",
+    "total_pages": 1,
+    "failed_pages": [],
+    "pages_extracted": 1,
+    "content": "Email received on: 02-Oct-2024 00:00:00.00 CEST\nSubject: SYN-2025-4360319-26116717\nFrom: elisabethweber@outlook.com\nTo: Schaden (duden)\nCc:\nAttachments: Fotos.jpg\nSehr geehrte Damen und Herren,\nanbei \u00fcbermittle ich Ihnen die Schadenmeldung bez\u00fcglich meiner Polizze FAKE-B14970-6683.\nSchadenart: Einbruchdiebstahl\nSchadendatum: 05.09.2024\nEinbruch durch Kellerfenster, mehrere Elektroger\u00e4te gestohlen.\nIch bitte um rasche Bearbeitung meines Anliegens.\nMit freundlichen Gr\u00fc\u00dfen,\nElisabeth Weber\nTel: +43 606 3408431",
+    "ingested_at": "2026-04-20T17:51:20.067227",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20257801665_54780057.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20257801665_54780057.pdf",
+    "total_pages": 3,
+    "failed_pages": [],
+    "pages_extracted": 3,
+    "content": "Email received on: 11-Aug-2024 00:00:00.00 CEST\nSubject: Rechnung SYN-2025-2714541-50666839\nFrom: christian.bauer@gmail.com\nTo: Schaden (duden)\nCc:\nAttachments: Rechnung_SYN-2025-2714541-50666839.pdf\nSehr geehrte Damen und Herren,\nanbei erhalten Sie die Rechnung f\u00fcr die Schadenbehebung zur Schadennummer SYN-2025-2714541-50666839.\nRechnungsbetrag: 10.608 EUR\nSchadendatum: 02.08.2024\nPolizzennummer: FAKE-C71513-5011\nIch bitte um \u00dcberweisung des Betrages auf mein Konto.\nMit freundlichen Gr\u00fc\u00dfen,\nChristian Bauer\nIBAN: AT00 0000 0000 4173 6670\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:20.116707",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20258131255_47484442.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20258131255_47484442.pdf",
+    "total_pages": 5,
+    "failed_pages": [],
+    "pages_extracted": 5,
+    "content": "Email received on: 30-Dec-2025 00:00:00.00 CEST\nSubject: AW: SYN-2024-7455892-78345357\nFrom: mgruber@icloud.com\nTo: Schaden (duden)\nCc:\nAttachments: Schadenfotos.jpg\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2024-7455892-78345357 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nHochwasser hat Erdgeschoss und Keller besch\u00e4digt.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nMonika Gruber\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 3 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 4 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:20.184151",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20257060017_82123643.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20257060017_82123643.pdf",
+    "total_pages": 3,
+    "failed_pages": [],
+    "pages_extracted": 3,
+    "content": "Email received on: 13-Mar-2024 00:00:00.00 CEST\nSubject: SYN-2025-5861203-18288671\nFrom: peter.schwarz@gmx.at\nTo: Schaden (duden)\nCc:\nAttachments: Niederschlagsnachweis.pdf\nSehr geehrte Damen und Herren,\nanbei \u00fcbermittle ich Ihnen die Schadenmeldung bez\u00fcglich meiner Polizze FAKE-A94165-9838.\nSchadenart: Elementarschaden\nSchadendatum: 01.03.2024\nHagel hat das Dach und die Fassade besch\u00e4digt.\nIch bitte um rasche Bearbeitung meines Anliegens.\nMit freundlichen Gr\u00fc\u00dfen,\nPeter Schwarz\nTel: +43 645 9975918\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:20.241712",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20241464876_32974929.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20241464876_32974929.pdf",
+    "total_pages": 8,
+    "failed_pages": [],
+    "pages_extracted": 8,
+    "content": "Email received on: 18-Sep-2025 00:00:00.00 CEST\nSubject: AW: SYN-2025-2227266-22527057\nFrom: klausm\u00fcller@outlook.com\nTo: Schaden (duden)\nCc:\nAttachments: Niederschlagsnachweis.pdf\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2025-2227266-22527057 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nHochwasser hat Erdgeschoss und Keller besch\u00e4digt.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nKlaus M\u00fcller\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 3 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 4 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 5 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 6 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 7 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:20.328489",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20243024518_72823425.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20243024518_72823425.pdf",
+    "total_pages": 1,
+    "failed_pages": [],
+    "pages_extracted": 1,
+    "content": "Email received on: 14-Aug-2024 00:00:00.00 CEST\nSubject: Rechnung SYN-2025-3549261-23528256\nFrom: christian.leitner@gmx.at\nTo: Schaden (duden)\nCc:\nAttachments: Rechnung_SYN-2025-3549261-23528256.pdf\nSehr geehrte Damen und Herren,\nanbei erhalten Sie die Rechnung f\u00fcr die Schadenbehebung zur Schadennummer SYN-2025-3549261-23528256.\nRechnungsbetrag: 11.158 EUR\nSchadendatum: 08.08.2024\nPolizzennummer: FAKE-D14720-3681\nIch bitte um \u00dcberweisung des Betrages auf mein Konto.\nMit freundlichen Gr\u00fc\u00dfen,\nChristian Leitner\nIBAN: AT00 0000 0000 6909 6845",
+    "ingested_at": "2026-04-20T17:51:20.361203",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20257331999_34333791.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20257331999_34333791.pdf",
+    "total_pages": 3,
+    "failed_pages": [],
+    "pages_extracted": 3,
+    "content": "Email received on: 11-Oct-2024 00:00:00.00 CEST\nSubject: Rechnung SYN-2025-4468443-90321968\nFrom: klaus.becker@gmail.com\nTo: Schaden (duden)\nCc:\nAttachments: Rechnung_SYN-2025-4468443-90321968.pdf\nSehr geehrte Damen und Herren,\nanbei erhalten Sie die Rechnung f\u00fcr die Schadenbehebung zur Schadennummer SYN-2025-4468443-90321968.\nRechnungsbetrag: 3.038 EUR\nSchadendatum: 21.09.2024\nPolizzennummer: FAKE-D54361-9286\nIch bitte um \u00dcberweisung des Betrages auf mein Konto.\nMit freundlichen Gr\u00fc\u00dfen,\nKlaus Becker\nIBAN: AT00 0000 0000 7848 9346\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:20.405004",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20249459696_69071004.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20249459696_69071004.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 16-Aug-2025 00:00:00.00 CEST\nSubject: SYN-2024-8734768-70323566\nFrom: kfz-schaden@duden.at\nTo: cfischer@icloud.com\nCc:\nAttachments:\nSehr geehrte/r Christian Fischer,\nvielen Dank f\u00fcr Ihre Schadenmeldung zur Schadennummer SYN-2024-8734768-70323566.\nUm Ihren Schaden bearbeiten zu k\u00f6nnen, ben\u00f6tigen wir folgende Unterlagen:\n? Leckortungsprotokoll\n? Fotos des Schadens\n? Kostenvoranschlag der Reparatur\n? Rechnung des Installateurs\nBitte senden Sie uns diese Dokumente so bald wie m\u00f6glich zu.\nMit freundlichen Gr\u00fc\u00dfen,\nSchadenabteilung duden \u00d6sterreich\nkfz-schaden@duden.at\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:20.442931",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20248282853_42968701.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20248282853_42968701.pdf",
+    "total_pages": 1,
+    "failed_pages": [],
+    "pages_extracted": 1,
+    "content": "Email received on: 14-Oct-2025 00:00:00.00 CEST\nSubject: SYN-2025-5186308-32554637\nFrom: schaden@duden.at\nTo: sabine.leitner@gmail.com\nCc:\nAttachments:\nSehr geehrte/r Sabine Leitner,\nvielen Dank f\u00fcr Ihre Schadenmeldung zur Schadennummer SYN-2025-5186308-32554637.\nUm Ihren Schaden bearbeiten zu k\u00f6nnen, ben\u00f6tigen wir folgende Unterlagen:\n? Leckortungsprotokoll\n? Fotos des Schadens\n? Kostenvoranschlag der Reparatur\n? Rechnung des Installateurs\nBitte senden Sie uns diese Dokumente so bald wie m\u00f6glich zu.\nMit freundlichen Gr\u00fc\u00dfen,\nSchadenabteilung duden \u00d6sterreich\nschaden@duden.at",
+    "ingested_at": "2026-04-20T17:51:20.471165",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20241502168_96346449.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20241502168_96346449.pdf",
+    "total_pages": 1,
+    "failed_pages": [],
+    "pages_extracted": 1,
+    "content": "Email received on: 25-Dec-2025 00:00:00.00 CEST\nSubject: AW: SYN-2025-8996220-64976005\nFrom: klaushoffmann@outlook.com\nTo: Schaden (duden)\nCc:\nAttachments: Leckortung.pdf\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2025-8996220-64976005 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nEin geplatztes Rohr hat den Keller \u00fcberflutet und den Bodenbelag besch\u00e4digt.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nKlaus Hoffmann",
+    "ingested_at": "2026-04-20T17:51:20.504058",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20252777390_34072932.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20252777390_34072932.pdf",
+    "total_pages": 3,
+    "failed_pages": [],
+    "pages_extracted": 3,
+    "content": "Email received on: 07-Oct-2024 00:00:00.00 CEST\nSubject: SYN-2025-3633526-24377692\nFrom: michael.m\u00fcller@gmail.com\nTo: Schaden (duden)\nCc:\nAttachments: Schadenfotos.jpg\nSehr geehrte Damen und Herren,\nanbei \u00fcbermittle ich Ihnen die Schadenmeldung bez\u00fcglich meiner Polizze FAKE-C14395-9273.\nSchadenart: Sturmschaden\nSchadendatum: 02.10.2024\nSturm hat Dachziegel abgedeckt und zu Wassereintritt gef\u00fchrt.\nIch bitte um rasche Bearbeitung meines Anliegens.\nMit freundlichen Gr\u00fc\u00dfen,\nMichael M\u00fcller\nTel: +43 691 1496201\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:20.684668",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20245478798_82304902.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20245478798_82304902.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 09-Oct-2024 00:00:00.00 CEST\nSubject: SYN-2025-7657225-14842916\nFrom: kfz-schaden@duden.at\nTo: mweber@icloud.com\nCc:\nAttachments:\nSehr geehrte/r Monika Weber,\nvielen Dank f\u00fcr Ihre Schadenmeldung zur Schadennummer SYN-2025-7657225-14842916.\nUm Ihren Schaden bearbeiten zu k\u00f6nnen, ben\u00f6tigen wir folgende Unterlagen:\n? Fotos des Schadens\n? Niederschlagsnachweis\n? Kostenvoranschlag\n? Beh\u00f6rdliche Best\u00e4tigung\nBitte senden Sie uns diese Dokumente so bald wie m\u00f6glich zu.\nMit freundlichen Gr\u00fc\u00dfen,\nSchadenabteilung duden \u00d6sterreich\nkfz-schaden@duden.at\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:20.725121",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20247986767_34930916.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20247986767_34930916.pdf",
+    "total_pages": 3,
+    "failed_pages": [],
+    "pages_extracted": 3,
+    "content": "Email received on: 16-Dec-2024 00:00:00.00 CEST\nSubject: AW: SYN-2024-8107727-72579827\nFrom: ibecker@icloud.com\nTo: Schaden (duden)\nCc:\nAttachments: Foto_Glasbruch.jpg\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2024-8107727-72579827 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nTerrassenfenster durch herabfallenden Ast gebrochen.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nIngrid Becker\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:20.775597",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20243033006_63302386.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20243033006_63302386.pdf",
+    "total_pages": 3,
+    "failed_pages": [],
+    "pages_extracted": 3,
+    "content": "Email received on: 09-Nov-2024 00:00:00.00 CEST\nSubject: Rechnung SYN-2024-1036799-61567071\nFrom: mariafischer@outlook.com\nTo: Schaden (duden)\nCc:\nAttachments: Rechnung_SYN-2024-1036799-61567071.pdf\nSehr geehrte Damen und Herren,\nanbei erhalten Sie die Rechnung f\u00fcr die Schadenbehebung zur Schadennummer SYN-2024-1036799-61567071.\nRechnungsbetrag: 1.422 EUR\nSchadendatum: 14.10.2024\nPolizzennummer: FAKE-C53189-4380\nIch bitte um \u00dcberweisung des Betrages auf mein Konto.\nMit freundlichen Gr\u00fc\u00dfen,\nMaria Fischer\nIBAN: AT00 0000 0000 5067 3341\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:20.819726",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20242536710_33723152.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20242536710_33723152.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 07-Nov-2024 00:00:00.00 CEST\nSubject: SYN-2024-5851760-43235944\nFrom: cschwarz@icloud.com\nTo: Schaden (duden)\nCc:\nAttachments: Foto_Schaden.jpg\nSehr geehrte Damen und Herren,\nanbei \u00fcbermittle ich Ihnen die Schadenmeldung bez\u00fcglich meiner Polizze FAKE-B28859-4472.\nSchadenart: Leitungswasser\nSchadendatum: 18.10.2024\nEin geplatztes Rohr hat den Keller \u00fcberflutet und den Bodenbelag besch\u00e4digt.\nIch bitte um rasche Bearbeitung meines Anliegens.\nMit freundlichen Gr\u00fc\u00dfen,\nChristian Schwarz\nTel: +43 656 8005912\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:20.854291",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20252131114_40476258.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20252131114_40476258.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 18-Nov-2024 00:00:00.00 CEST\nSubject: AW: SYN-2025-4356785-56465911\nFrom: michael.wagner@gmx.at\nTo: Schaden (duden)\nCc:\nAttachments: Polizeianzeige.pdf\nSehr geehrte Damen und Herren,\nbezugnehmend auf Ihre Anfrage zur Schadennummer SYN-2025-4356785-56465911 \u00fcbersende ich Ihnen anbei die\nangeforderten Unterlagen.\nEinbruch durch Kellerfenster, mehrere Elektroger\u00e4te gestohlen.\nBitte best\u00e4tigen Sie den Eingang der Dokumente.\nMit freundlichen Gr\u00fc\u00dfen,\nMichael Wagner\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:20.895831",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20248083962_88011315.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20248083962_88011315.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 20-Feb-2025 00:00:00.00 CEST\nSubject: SYN-2025-1293444-78977785\nFrom: stefan.weber@gmail.com\nTo: Schaden (duden)\nCc:\nAttachments: Schadenfotos.jpg\nSehr geehrte Damen und Herren,\nanbei \u00fcbermittle ich Ihnen die Schadenmeldung bez\u00fcglich meiner Polizze FAKE-B46811-4318.\nSchadenart: Elementarschaden\nSchadendatum: 25.01.2025\nStarkregen hat zu \u00dcberflutung des Kellers gef\u00fchrt.\nIch bitte um rasche Bearbeitung meines Anliegens.\nMit freundlichen Gr\u00fc\u00dfen,\nStefan Weber\nTel: +43 678 1928879\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:20.924583",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20244271559_69936581.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20244271559_69936581.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 08-May-2024 00:00:00.00 CEST\nSubject: Rechnung SYN-2024-2386595-66097406\nFrom: ingrid.fischer@gmx.at\nTo: Schaden (duden)\nCc:\nAttachments: Rechnung_SYN-2024-2386595-66097406.pdf\nSehr geehrte Damen und Herren,\nanbei erhalten Sie die Rechnung f\u00fcr die Schadenbehebung zur Schadennummer SYN-2024-2386595-66097406.\nRechnungsbetrag: 11.422 EUR\nSchadendatum: 13.04.2024\nPolizzennummer: FAKE-B41372-8137\nIch bitte um \u00dcberweisung des Betrages auf mein Konto.\nMit freundlichen Gr\u00fc\u00dfen,\nIngrid Fischer\nIBAN: AT00 0000 0000 7263 3927\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:20.951332",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20243101171_47575288.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20243101171_47575288.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 07-Nov-2024 00:00:00.00 CEST\nSubject: SYN-2025-8750226-12134907\nFrom: kfz-schaden@duden.at\nTo: elisabeth.fischer@gmail.com\nCc:\nAttachments:\nSehr geehrte/r Elisabeth Fischer,\nvielen Dank f\u00fcr Ihre Schadenmeldung zur Schadennummer SYN-2025-8750226-12134907.\nUm Ihren Schaden bearbeiten zu k\u00f6nnen, ben\u00f6tigen wir folgende Unterlagen:\n? Fotos des Schadens\n? Wetterbericht\n? Kostenvoranschlag\n? Dachdecker-Rechnung\nBitte senden Sie uns diese Dokumente so bald wie m\u00f6glich zu.\nMit freundlichen Gr\u00fc\u00dfen,\nSchadenabteilung duden \u00d6sterreich\nkfz-schaden@duden.at\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:20.976826",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20251655002_22084858.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20251655002_22084858.pdf",
+    "total_pages": 1,
+    "failed_pages": [],
+    "pages_extracted": 1,
+    "content": "Email received on: 30-Nov-2025 00:00:00.00 CEST\nSubject: SYN-2024-9836727-26189700\nFrom: mschwarz@icloud.com\nTo: Schaden (duden)\nCc:\nAttachments: Leckortung.pdf\nSehr geehrte Damen und Herren,\nanbei \u00fcbermittle ich Ihnen die Schadenmeldung bez\u00fcglich meiner Polizze FAKE-B83582-1687.\nSchadenart: Leitungswasser\nSchadendatum: 11.11.2025\nWasserrohrbruch im Badezimmer hat zu erheblichen Sch\u00e4den an der Bausubstanz gef\u00fchrt.\nIch bitte um rasche Bearbeitung meines Anliegens.\nMit freundlichen Gr\u00fc\u00dfen,\nMarkus Schwarz\nTel: +43 611 5525323",
+    "ingested_at": "2026-04-20T17:51:20.999381",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20246060192_24262466.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20246060192_24262466.pdf",
+    "total_pages": 2,
+    "failed_pages": [],
+    "pages_extracted": 2,
+    "content": "Email received on: 20-Nov-2025 00:00:00.00 CEST\nSubject: SYN-2024-2550926-11352801\nFrom: haushaltsschaden@duden.at\nTo: sabineleitner@outlook.com\nCc:\nAttachments:\nSehr geehrte/r Sabine Leitner,\nvielen Dank f\u00fcr Ihre Schadenmeldung zur Schadennummer SYN-2024-2550926-11352801.\nUm Ihren Schaden bearbeiten zu k\u00f6nnen, ben\u00f6tigen wir folgende Unterlagen:\n? Fotos des Schadens\n? Wetterbericht\n? Kostenvoranschlag\n? Dachdecker-Rechnung\nBitte senden Sie uns diese Dokumente so bald wie m\u00f6glich zu.\nMit freundlichen Gr\u00fc\u00dfen,\nSchadenabteilung duden \u00d6sterreich\nhaushaltsschaden@duden.at\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:21.035907",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20242555165_47676313.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20242555165_47676313.pdf",
+    "total_pages": 1,
+    "failed_pages": [],
+    "pages_extracted": 1,
+    "content": "Email received on: 04-Dec-2024 00:00:00.00 CEST\nSubject: SYN-2024-2933712-70137645\nFrom: cm\u00fcller@icloud.com\nTo: Schaden (duden)\nCc:\nAttachments: Kostenvoranschlag.pdf\nSehr geehrte Damen und Herren,\nanbei \u00fcbermittle ich Ihnen die Schadenmeldung bez\u00fcglich meiner Polizze FAKE-C80668-2413.\nSchadenart: Glasbruch\nSchadendatum: 25.11.2024\nFensterscheibe durch Steinwurf besch\u00e4digt.\nIch bitte um rasche Bearbeitung meines Anliegens.\nMit freundlichen Gr\u00fc\u00dfen,\nChristian M\u00fcller\nTel: +43 633 2281743",
+    "ingested_at": "2026-04-20T17:51:21.063610",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20244911000_47479221.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20244911000_47479221.pdf",
+    "total_pages": 1,
+    "failed_pages": [],
+    "pages_extracted": 1,
+    "content": "Email received on: 13-Jun-2024 00:00:00.00 CEST\nSubject: SYN-2025-5389998-55320185\nFrom: choffmann@icloud.com\nTo: Schaden (duden)\nCc:\nAttachments: Niederschlagsnachweis.pdf\nSehr geehrte Damen und Herren,\nanbei \u00fcbermittle ich Ihnen die Schadenmeldung bez\u00fcglich meiner Polizze FAKE-B55448-1581.\nSchadenart: Elementarschaden\nSchadendatum: 07.06.2024\nStarkregen hat zu \u00dcberflutung des Kellers gef\u00fchrt.\nIch bitte um rasche Bearbeitung meines Anliegens.\nMit freundlichen Gr\u00fc\u00dfen,\nChristian Hoffmann\nTel: +43 651 8468219",
+    "ingested_at": "2026-04-20T17:51:21.095590",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20243853244_29203452.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20243853244_29203452.pdf",
+    "total_pages": 1,
+    "failed_pages": [],
+    "pages_extracted": 1,
+    "content": "Email received on: 06-Aug-2025 00:00:00.00 CEST\nSubject: Rechnung SYN-2024-3738228-45963850\nFrom: stefan.steiner@gmx.at\nTo: Schaden (duden)\nCc:\nAttachments: Rechnung_SYN-2024-3738228-45963850.pdf\nSehr geehrte Damen und Herren,\nanbei erhalten Sie die Rechnung f\u00fcr die Schadenbehebung zur Schadennummer SYN-2024-3738228-45963850.\nRechnungsbetrag: 8.588 EUR\nSchadendatum: 16.07.2025\nPolizzennummer: FAKE-C32683-7405\nIch bitte um \u00dcberweisung des Betrages auf mein Konto.\nMit freundlichen Gr\u00fc\u00dfen,\nStefan Steiner\nIBAN: AT00 0000 0000 6230 6281",
+    "ingested_at": "2026-04-20T17:51:21.131954",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20254883510_82340066.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20254883510_82340066.pdf",
+    "total_pages": 3,
+    "failed_pages": [],
+    "pages_extracted": 3,
+    "content": "Email received on: 21-Apr-2025 00:00:00.00 CEST\nSubject: Rechnung SYN-2025-4095594-19786141\nFrom: ahuber@icloud.com\nTo: Schaden (duden)\nCc:\nAttachments: Rechnung_SYN-2025-4095594-19786141.pdf\nSehr geehrte Damen und Herren,\nanbei erhalten Sie die Rechnung f\u00fcr die Schadenbehebung zur Schadennummer SYN-2025-4095594-19786141.\nRechnungsbetrag: 13.850 EUR\nSchadendatum: 20.04.2025\nPolizzennummer: FAKE-B35914-1948\nIch bitte um \u00dcberweisung des Betrages auf mein Konto.\nMit freundlichen Gr\u00fc\u00dfen,\nAndrea Huber\nIBAN: AT00 0000 0000 1365 1059\n[Anlage 1 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.\n[Anlage 2 - Scan/Foto]\nDieses Dokument ist ein Anhang zur Schadenmeldung.",
+    "ingested_at": "2026-04-20T17:51:21.176615",
+    "status": "success"
+  },
+  {
+    "file_name": "claim_20252726045_51284596.pdf",
+    "file_path": "/home/waqas/Documents/projects/insurance-pipeline/data/pdfs/claim_20252726045_51284596.pdf",
+    "total_pages": 1,
+    "failed_pages": [],
+    "pages_extracted": 1,
+    "content": "Email received on: 26-Aug-2025 00:00:00.00 CEST\nSubject: SYN-2024-8371957-38250592\nFrom: ingrid.becker@gmail.com\nTo: Schaden (duden)\nCc:\nAttachments: Polizeianzeige.pdf\nSehr geehrte Damen und Herren,\nanbei \u00fcbermittle ich Ihnen die Schadenmeldung bez\u00fcglich meiner Polizze FAKE-C61090-4869.\nSchadenart: Einbruchdiebstahl\nSchadendatum: 29.07.2025\nEinbruch durch Kellerfenster, mehrere Elektroger\u00e4te gestohlen.\nIch bitte um rasche Bearbeitung meines Anliegens.\nMit freundlichen Gr\u00fc\u00dfen,\nIngrid Becker\nTel: +43 637 7872096",
+    "ingested_at": "2026-04-20T17:51:21.209519",
+    "status": "success"
+  }
+]

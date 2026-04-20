@@ -1,0 +1,10 @@
+{
+  "run_at": "2026-04-20T17:51:22.488692",
+  "total_documents": 90,
+  "successful": 90,
+  "failed": 0,
+  "skipped": 0,
+  "document_types_found": {
+    "claim_communication": 90
+  }
+}

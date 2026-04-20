@@ -15,6 +15,7 @@ from datetime import datetime
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 from ui.components.theme import inject_css
+from ui.components.runtime import is_demo_mode
 from ui.components.widgets import (
     render_hero,
     render_kpi_row,
@@ -29,6 +30,7 @@ from ui.components.widgets import (
 
 def render():
     inject_css()
+    demo_mode = is_demo_mode()
 
     render_hero(
         title="Pipeline Runner",
@@ -36,6 +38,11 @@ def render():
                  "Monitor progress in real-time with live logs.",
         badge="Operations",
     )
+
+    if demo_mode:
+        st.warning(
+            "Demo mode is active. Pipeline execution is disabled on hosted deployments to avoid memory and index-write failures."
+        )
 
     # ─── Current pipeline status ──────────────────────────
     st.markdown("### Current Pipeline Status")
@@ -141,7 +148,7 @@ def render():
         pdf_count = get_pdf_count()
         st.info(f"**{pdf_count}** PDF files found in `data/pdfs/`")
 
-        if st.button("Run Full Pipeline", key="run_full", type="primary"):
+        if st.button("Run Full Pipeline", key="run_full", type="primary", disabled=demo_mode):
             _run_full_pipeline()
 
     with tab2:
@@ -152,7 +159,7 @@ def render():
         This stage runs locally — no API calls needed.
         """)
 
-        if st.button("Run Ingestion", key="run_ingest"):
+        if st.button("Run Ingestion", key="run_ingest", disabled=demo_mode):
             _run_stage("ingestion", _execute_ingestion)
 
     with tab3:
@@ -169,7 +176,7 @@ def render():
         else:
             st.warning("⚠️ Run Stage 1 (Ingestion) first")
 
-        if st.button("Run Extraction", key="run_extract"):
+        if st.button("Run Extraction", key="run_extract", disabled=demo_mode):
             _run_stage("extraction", _execute_extraction)
 
     with tab4:
@@ -186,7 +193,7 @@ def render():
         else:
             st.warning("⚠️ Run Stage 2 (Extraction) first")
 
-        if st.button("Run Chunking + Embedding", key="run_chunk_embed"):
+        if st.button("Run Chunking + Embedding", key="run_chunk_embed", disabled=demo_mode):
             _run_stage("chunking & embedding", _execute_chunk_and_embed)
 
     st.markdown("<br>", unsafe_allow_html=True)

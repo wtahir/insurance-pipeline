@@ -13,6 +13,7 @@ from datetime import datetime
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 from ui.components.theme import inject_css
+from ui.components.runtime import is_demo_mode
 from ui.components.widgets import (
     render_hero,
     render_kpi_row,
@@ -23,6 +24,7 @@ from ui.components.widgets import (
 
 def render():
     inject_css()
+    demo_mode = is_demo_mode()
 
     render_hero(
         title="Query Interface",
@@ -31,72 +33,90 @@ def render():
         badge="AI Assistant",
     )
 
-    # ─── Query form ───────────────────────────────────────
+    query_log = load_json("query_log.json") or []
+
+    # ─── Query form / Demo selector ──────────────────────
     st.markdown("### Ask a Question")
 
-    query_col, options_col = st.columns([3, 1])
-
-    with query_col:
-        user_query = st.text_area(
-            "Your question",
-            placeholder="e.g., What documents are missing from water damage claims?\n"
-                        "Which claims require urgent attention?\n"
-                        "What actions are required by the policyholder?",
-            height=120,
-            label_visibility="collapsed",
+    if demo_mode:
+        st.info(
+            "Demo mode is active. Live query execution is disabled for stability. "
+            "Select a precomputed query below to explore retrieved chunks and answers."
         )
+        if query_log:
+            recent = list(reversed(query_log))
+            selected = st.selectbox(
+                "Sample query",
+                options=range(len(recent)),
+                format_func=lambda i: f"{i+1}. {recent[i].get('query', 'No query')[:100]}",
+            )
+            _render_query_result(recent[selected], 0)
+        else:
+            st.warning("No sample query log found. Add `data/output/query_log.json` to demo this page.")
+    else:
+        query_col, options_col = st.columns([3, 1])
 
-    with options_col:
-        st.markdown("**Options**")
-        n_results = st.slider("Chunks to retrieve", 1, 15, 5)
+        with query_col:
+            user_query = st.text_area(
+                "Your question",
+                placeholder="e.g., What documents are missing from water damage claims?\n"
+                            "Which claims require urgent attention?\n"
+                            "What actions are required by the policyholder?",
+                height=120,
+                label_visibility="collapsed",
+            )
 
-        use_filter = st.toggle("Use metadata filter", value=False)
+        with options_col:
+            st.markdown("**Options**")
+            n_results = st.slider("Chunks to retrieve", 1, 15, 5)
 
-        urgency_filter = None
-        claim_filter = None
-        if use_filter:
-            urgency_filter = st.selectbox("Urgency filter", ["Any", "high", "normal", "low"])
-            claim_filter = st.text_input("Claim number filter", placeholder="e.g., 2025 1033831")
+            use_filter = st.toggle("Use metadata filter", value=False)
 
-    # ─── Submit ───────────────────────────────────────────
-    if st.button("Search & Generate Answer", type="primary"):
-        if not user_query.strip():
-            st.warning("Please enter a question.")
-            return
+            urgency_filter = None
+            claim_filter = None
+            if use_filter:
+                urgency_filter = st.selectbox("Urgency filter", ["Any", "high", "normal", "low"])
+                claim_filter = st.text_input("Claim number filter", placeholder="e.g., 2025 1033831")
 
-        # Build metadata filter
-        metadata_filter = None
-        if use_filter:
-            filters = []
-            if urgency_filter and urgency_filter != "Any":
-                filters.append({"urgency": urgency_filter})
-            if claim_filter and claim_filter.strip():
-                filters.append({"claim_number": claim_filter.strip()})
-
-            if len(filters) == 1:
-                metadata_filter = filters[0]
-            elif len(filters) > 1:
-                metadata_filter = {"$and": filters}
-
-        # Execute query
-        with st.spinner("🔍 Retrieving relevant chunks and generating answer..."):
-            try:
-                from stage5_retrieval import query_pipeline
-                result = query_pipeline(
-                    query=user_query,
-                    metadata_filter=metadata_filter,
-                    n_results=n_results,
-                )
-
-                # Store result in session state for display
-                if "query_results" not in st.session_state:
-                    st.session_state.query_results = []
-                st.session_state.query_results.insert(0, result)
-
-            except Exception as e:
-                st.error(f"❌ Query failed: {str(e)}")
-                st.info("Make sure Stage 4 (Embedding) has been run and ChromaDB has vectors stored.")
+        # ─── Submit ───────────────────────────────────────────
+        if st.button("Search & Generate Answer", type="primary"):
+            if not user_query.strip():
+                st.warning("Please enter a question.")
                 return
+
+            # Build metadata filter
+            metadata_filter = None
+            if use_filter:
+                filters = []
+                if urgency_filter and urgency_filter != "Any":
+                    filters.append({"urgency": urgency_filter})
+                if claim_filter and claim_filter.strip():
+                    filters.append({"claim_number": claim_filter.strip()})
+
+                if len(filters) == 1:
+                    metadata_filter = filters[0]
+                elif len(filters) > 1:
+                    metadata_filter = {"$and": filters}
+
+            # Execute query
+            with st.spinner("🔍 Retrieving relevant chunks and generating answer..."):
+                try:
+                    from stage5_retrieval import query_pipeline
+                    result = query_pipeline(
+                        query=user_query,
+                        metadata_filter=metadata_filter,
+                        n_results=n_results,
+                    )
+
+                    # Store result in session state for display
+                    if "query_results" not in st.session_state:
+                        st.session_state.query_results = []
+                    st.session_state.query_results.insert(0, result)
+
+                except Exception as e:
+                    st.error(f"❌ Query failed: {str(e)}")
+                    st.info("Make sure Stage 4 (Embedding) has been run and ChromaDB has vectors stored.")
+                    return
 
     # ─── Display results ──────────────────────────────────
     if "query_results" in st.session_state and st.session_state.query_results:
@@ -107,7 +127,6 @@ def render():
 
     # ─── Query History ────────────────────────────────────
     st.markdown("### Query History")
-    query_log = load_json("query_log.json")
 
     if query_log:
         st.markdown(f"**{len(query_log)} queries logged**")

@@ -1,0 +1,14 @@
+{
+  "run_at": "2026-04-20T17:51:23.282614",
+  "documents_processed": 90,
+  "total_chunks_produced": 105,
+  "single_chunk_documents": 75,
+  "multi_chunk_documents": 15,
+  "avg_chunks_per_document": 1.17,
+  "chunk_config": {
+    "chunk_size": 800,
+    "chunk_overlap": 150,
+    "min_chunk_size": 100,
+    "short_doc_threshold": 600
+  }
+}

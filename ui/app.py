@@ -18,6 +18,7 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from ui.components.theme import inject_css
+from ui.components.runtime import is_demo_mode
 
 # ─── Page config ─────────────────────────────────────────────
 st.set_page_config(
@@ -37,6 +38,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 inject_css()
+demo_mode = is_demo_mode()
 
 
 # ─── Sidebar ─────────────────────────────────────────────────
@@ -49,6 +51,12 @@ with st.sidebar:
     </div>
     <hr style="border-color:#334155; margin:16px 0;">
     """, unsafe_allow_html=True)
+
+    if demo_mode:
+        st.markdown(
+            "<div style='color:#F59E0B; font-size:0.8rem; font-weight:600; text-align:center; margin-bottom:10px;'>DEMO MODE (Read-only)</div>",
+            unsafe_allow_html=True,
+        )
 
     page = st.radio(
         "Navigation",
