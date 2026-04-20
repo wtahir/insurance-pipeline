@@ -232,7 +232,9 @@ def _render_query_result(result: dict, idx: int):
                     if rerank_score is not None else ""
                 )
 
-                st.markdown(f"""
+                chunk_text = chunk.get('text', '')
+                chunk_text_display = html.escape(chunk_text[:500]) + ('...' if len(chunk_text) > 500 else '')
+                st.html(f"""
                 <div style="background:#0F172A; border:1px solid #334155; border-radius:8px;
                             padding:16px; margin-bottom:10px;">
                     <div style="display:flex; justify-content:space-between; align-items:center;
@@ -240,12 +242,12 @@ def _render_query_result(result: dict, idx: int):
                         <div>
                             <span style="color:#F8FAFC; font-weight:600;">Chunk {ci+1}</span>
                             <span style="color:#94A3B8; margin-left:8px; font-size:0.8rem;">
-                                {meta.get('file_name', '—')}
+                                {html.escape(meta.get('file_name', '—'))}
                             </span>
                         </div>
                         <div>
                             <span style="color:{quality_color}; font-size:0.8rem; font-weight:600;">
-                                ● {quality_label}
+                                &#9679; {html.escape(quality_label)}
                             </span>
                             <span style="color:#94A3B8; margin-left:8px; font-size:0.8rem;">
                                 Distance: {distance:.4f}
@@ -255,17 +257,17 @@ def _render_query_result(result: dict, idx: int):
                     </div>
                     <div style="display:flex; gap:12px; margin-bottom:10px; flex-wrap:wrap;">
                         <span style="color:#94A3B8; font-size:0.75rem;">
-                            🏷️ {meta.get('document_type', '—')}</span>
+                            🏷️ {html.escape(meta.get('document_type', '—'))}</span>
                         <span style="color:#94A3B8; font-size:0.75rem;">
-                            📋 Claim: {meta.get('claim_number', '—')}</span>
+                            📋 Claim: {html.escape(meta.get('claim_number', '—'))}</span>
                         <span style="color:#94A3B8; font-size:0.75rem;">
-                            📅 {meta.get('date', '—')}</span>
+                            📅 {html.escape(meta.get('date', '—'))}</span>
                         <span style="color:#94A3B8; font-size:0.75rem;">
-                            🚨 {meta.get('urgency', '—')}</span>
+                            🚨 {html.escape(meta.get('urgency', '—'))}</span>
                     </div>
                     <div style="color:#CBD5E1; font-size:0.85rem; line-height:1.6;
                                 background:#1E293B; border-radius:6px; padding:12px; white-space:pre-wrap;">
-                        {html.escape(chunk.get('text', '')[:500])}{'...' if len(chunk.get('text', '')) > 500 else ''}
+                        {chunk_text_display}
                     </div>
                 </div>
-                """, unsafe_allow_html=True)
+                """)
