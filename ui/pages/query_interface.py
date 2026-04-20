@@ -8,6 +8,7 @@ import streamlit as st
 import sys
 import os
 import json
+import html
 from datetime import datetime
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
@@ -263,8 +264,8 @@ def _render_query_result(result: dict, idx: int):
                             🚨 {meta.get('urgency', '—')}</span>
                     </div>
                     <div style="color:#CBD5E1; font-size:0.85rem; line-height:1.6;
-                                background:#1E293B; border-radius:6px; padding:12px;">
-                        {chunk.get('text', '')[:500]}{'...' if len(chunk.get('text', '')) > 500 else ''}
+                                background:#1E293B; border-radius:6px; padding:12px; white-space:pre-wrap;">
+                        {html.escape(chunk.get('text', '')[:500])}{'...' if len(chunk.get('text', '')) > 500 else ''}
                     </div>
                 </div>
                 """, unsafe_allow_html=True)
