@@ -14,18 +14,22 @@ import logging
 from datetime import datetime
 import chromadb
 from chromadb.utils import embedding_functions
-from config import CHUNKS_DATA, OUTPUT_FOLDER
+from config import (
+    CHUNKS_DATA, OUTPUT_FOLDER, EMBEDDING_SUMMARY, CHROMA_FOLDER,
+    EMBEDDING_MODEL, EMBEDDING_BATCH_SIZE, CHROMA_COLLECTION,
+    LOG_FOLDER, LOG_FORMAT,
+)
 from dotenv import load_dotenv
 
 load_dotenv()
 
-os.makedirs("logs", exist_ok=True)
-os.makedirs("chroma_db", exist_ok=True)
+os.makedirs(LOG_FOLDER, exist_ok=True)
+os.makedirs(CHROMA_FOLDER, exist_ok=True)
 
 logging.basicConfig(
-    filename="logs/embedding.log",
+    filename=os.path.join(LOG_FOLDER, "embedding.log"),
     level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
+    format=LOG_FORMAT,
 )
 
 # --- Embedding model ---
@@ -35,31 +39,39 @@ logging.basicConfig(
 # vector space. This means a German chunk and an English query can
 # still match if they mean the same thing.
 # It runs on your CPU, no API cost, no internet needed after first download.
-EMBEDDING_MODEL = "paraphrase-multilingual-MiniLM-L12-v2"
 
-# --- ChromaDB setup ---
-# PersistentClient saves to disk — your vectors survive between runs.
-# If you used Client() instead, everything would be lost on restart.
-chroma_client = chromadb.PersistentClient(path="chroma_db")
 
-embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
-    model_name=EMBEDDING_MODEL
-)
+# --- Lazy initialisation ---
+# ChromaDB client and collection are created on first use, not at import time.
+# This prevents side effects when importing this module in tests or UI code.
 
-# Collection is like a table in ChromaDB.
-# get_or_create means: use existing collection if it exists, create if not.
-# This makes the stage safely rerunnable.
-collection = chroma_client.get_or_create_collection(
-    name="insurance_claims",
-    embedding_function=embedding_fn,
-    metadata={"hnsw:space": "cosine"}  # cosine similarity — standard for text
-)
+_chroma_client = None
+_collection = None
+_embedding_fn = None
 
-# Batch size for ChromaDB upserts.
-# Why batch? Sending 549 individual inserts is slow.
-# Sending one batch of 549 is fast.
-# 100 is a safe batch size that works well for ChromaDB.
-BATCH_SIZE = 100
+
+def _get_embedding_fn():
+    global _embedding_fn
+    if _embedding_fn is None:
+        _embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
+            model_name=EMBEDDING_MODEL
+        )
+    return _embedding_fn
+
+
+def _get_collection():
+    global _chroma_client, _collection
+    if _collection is None:
+        _chroma_client = chromadb.PersistentClient(path=CHROMA_FOLDER)
+        _collection = _chroma_client.get_or_create_collection(
+            name=CHROMA_COLLECTION,
+            embedding_function=_get_embedding_fn(),
+            metadata={"hnsw:space": "cosine"},
+        )
+    return _collection
+
+# Batch size for ChromaDB upserts — configurable via EMBEDDING_BATCH_SIZE.
+BATCH_SIZE = EMBEDDING_BATCH_SIZE
 
 
 def build_metadata(chunk: dict) -> dict:
@@ -99,6 +111,7 @@ def embed_and_store(chunks: list[dict]):
     it gets updated rather than causing a duplicate error.
     This makes the stage safely rerunnable without clearing the DB first.
     """
+    collection = _get_collection()
     total = len(chunks)
     stored = 0
     failed = 0
@@ -146,9 +159,10 @@ def embed_all():
 
     print(f"Embedding {len(chunks)} chunks into ChromaDB...")
     print(f"Model: {EMBEDDING_MODEL}")
-    print(f"Collection: insurance_claims\n")
+    print(f"Collection: {CHROMA_COLLECTION}\n")
 
     # Check how many chunks are already in the collection
+    collection = _get_collection()
     existing_count = collection.count()
     if existing_count > 0:
         print(f"Note: collection already contains {existing_count} vectors — upserting (existing chunks will be updated)\n")
@@ -157,7 +171,7 @@ def embed_all():
     stored, failed = embed_and_store(chunks)
     duration = (datetime.now() - start_time).total_seconds()
 
-    final_count = collection.count()
+    final_count = _get_collection().count()
 
     summary = {
         "run_at": datetime.now().isoformat(),
@@ -170,7 +184,7 @@ def embed_all():
         "chunks_per_second": round(len(chunks) / duration, 1) if duration > 0 else 0
     }
 
-    with open("data/output/embedding_summary.json", "w") as f:
+    with open(EMBEDDING_SUMMARY, "w") as f:
         json.dump(summary, f, indent=2)
 
     logging.info(f"Embedding complete. {stored} stored, {failed} failed. Duration: {duration:.1f}s")

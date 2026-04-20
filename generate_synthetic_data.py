@@ -8,7 +8,7 @@ import random
 from datetime import datetime, timedelta
 from fpdf import FPDF
 
-os.makedirs("data/synthetic_pdfs", exist_ok=True)
+os.makedirs("data/pdfs", exist_ok=True)
 
 # --- Fake but realistic German names and data ---
 FIRST_NAMES = [
@@ -342,8 +342,8 @@ def generate_dataset(num_documents: int = 90):
         if (i + 1) % 10 == 0:
             print(f"  Generated {i+1}/{num_documents} documents...")
 
-    print(f"\nDone. {num_documents} synthetic PDFs in data/synthetic_pdfs/")
-    print("Update config.py PDF_FOLDER to 'data/synthetic_pdfs' to use them.")
+    print(f"\nDone. {num_documents} synthetic PDFs in data/pdfs/")
+    print("These are ready for the pipeline — run Stage 1 to ingest them.")
 
 
 if __name__ == "__main__":

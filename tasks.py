@@ -15,18 +15,18 @@ from celery_app import app
 from stage1_ingestion import extract_text_from_pdf
 from stage2_extraction import extract_document, client as azure_client
 from stage3_chunking import chunk_document
-from stage4_embedding import collection, build_metadata
+from stage4_embedding import _get_collection, build_metadata
 
-from config import OUTPUT_FOLDER
+from config import OUTPUT_FOLDER, LOG_FOLDER, LOG_FORMAT
 from datetime import datetime
 
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
-os.makedirs("logs", exist_ok=True)
+os.makedirs(LOG_FOLDER, exist_ok=True)
 
 logging.basicConfig(
-    filename="logs/celery_pipeline.log",
+    filename=os.path.join(LOG_FOLDER, "celery_pipeline.log"),
     level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
+    format=LOG_FORMAT,
 )
 
 
@@ -121,7 +121,7 @@ def embed_task(self, chunks: list[dict]) -> dict:
         documents = [c["text"] for c in chunks]
         metadatas = [build_metadata(c) for c in chunks]
 
-        collection.upsert(
+        _get_collection().upsert(
             ids=ids,
             documents=documents,
             metadatas=metadatas

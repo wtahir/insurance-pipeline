@@ -98,19 +98,19 @@ def render_pipeline_flow():
     """Render the pipeline architecture flow diagram."""
     st.markdown("""
     <div class="arch-flow">
-        <div class="arch-node">📄 PDF Upload</div>
+        <div class="arch-node">PDF Upload</div>
         <div class="arch-arrow">→</div>
-        <div class="arch-node">🔍 Ingestion</div>
+        <div class="arch-node">Ingestion</div>
         <div class="arch-arrow">→</div>
-        <div class="arch-node">🤖 Extraction</div>
+        <div class="arch-node">Extraction</div>
         <div class="arch-arrow">→</div>
-        <div class="arch-node">✂️ Chunking</div>
+        <div class="arch-node">Chunking</div>
         <div class="arch-arrow">→</div>
-        <div class="arch-node">📐 Embedding</div>
+        <div class="arch-node">Embedding</div>
         <div class="arch-arrow">→</div>
-        <div class="arch-node">🔎 Retrieval</div>
+        <div class="arch-node">Retrieval</div>
         <div class="arch-arrow">→</div>
-        <div class="arch-node">📊 Evaluation</div>
+        <div class="arch-node">Evaluation</div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -120,23 +120,23 @@ def render_tech_stack():
     st.markdown("""
     <div style="display:flex; flex-wrap:wrap; gap:10px; padding:12px 0;">
         <span style="background:#1E293B; border:1px solid #334155; padding:6px 14px; border-radius:20px; font-size:0.8rem; color:#94A3B8;">
-            🐍 Python</span>
+            Python</span>
         <span style="background:#1E293B; border:1px solid #334155; padding:6px 14px; border-radius:20px; font-size:0.8rem; color:#94A3B8;">
-            🧠 GPT-4o (Azure)</span>
+            GPT-4o (Azure)</span>
         <span style="background:#1E293B; border:1px solid #334155; padding:6px 14px; border-radius:20px; font-size:0.8rem; color:#94A3B8;">
-            🗄️ ChromaDB</span>
+            ChromaDB</span>
         <span style="background:#1E293B; border:1px solid #334155; padding:6px 14px; border-radius:20px; font-size:0.8rem; color:#94A3B8;">
-            🔗 LangChain</span>
+            Cross-Encoder Reranking</span>
         <span style="background:#1E293B; border:1px solid #334155; padding:6px 14px; border-radius:20px; font-size:0.8rem; color:#94A3B8;">
-            🧮 Sentence Transformers</span>
+            Sentence Transformers</span>
         <span style="background:#1E293B; border:1px solid #334155; padding:6px 14px; border-radius:20px; font-size:0.8rem; color:#94A3B8;">
-            📊 Streamlit</span>
+            Streamlit</span>
         <span style="background:#1E293B; border:1px solid #334155; padding:6px 14px; border-radius:20px; font-size:0.8rem; color:#94A3B8;">
-            🐳 Docker</span>
+            Docker</span>
         <span style="background:#1E293B; border:1px solid #334155; padding:6px 14px; border-radius:20px; font-size:0.8rem; color:#94A3B8;">
-            🥬 Celery + Redis</span>
+            Celery + Redis</span>
         <span style="background:#1E293B; border:1px solid #334155; padding:6px 14px; border-radius:20px; font-size:0.8rem; color:#94A3B8;">
-            📑 Pydantic</span>
+            Pydantic</span>
     </div>
     """, unsafe_allow_html=True)
 
@@ -154,3 +154,42 @@ def render_kpi_row(metrics: list[dict]):
                 value=m["value"],
                 delta=m.get("delta"),
             )
+
+
+# ─── Pipeline execution helpers ────────────────────────────────
+
+def _capture_output(fn):
+    """Run a function and capture its stdout."""
+    import io
+    from contextlib import redirect_stdout
+    buf = io.StringIO()
+    with redirect_stdout(buf):
+        fn()
+    return buf.getvalue()
+
+
+def auto_run_pipeline():
+    """Automatically run Stages 1-4 with progress display.
+    Returns True on success, False on error."""
+    stages = [
+        ("Ingestion — reading PDFs", lambda: __import__("stage1_ingestion").ingest_data()),
+        ("Extraction — classifying documents", lambda: __import__("stage2_extraction").extract_all()),
+        ("Chunking — splitting text", lambda: __import__("stage3_chunking").chunk_all()),
+        ("Embedding — vectorising chunks", lambda: __import__("stage4_embedding").embed_all()),
+    ]
+
+    progress = st.progress(0, text="Starting pipeline...")
+
+    for i, (label, fn) in enumerate(stages):
+        pct = int((i / len(stages)) * 100)
+        progress.progress(pct, text=f"Step {i+1}/{len(stages)}: {label}...")
+        try:
+            _capture_output(fn)
+            st.success(f"Step {i+1}: {label} — done")
+        except Exception as e:
+            st.error(f"Step {i+1}: {label} — failed: {e}")
+            progress.progress(100, text="Pipeline stopped due to error")
+            return False
+
+    progress.progress(100, text="Pipeline complete — documents are ready to query")
+    return True

@@ -45,7 +45,7 @@ def render():
         return
 
     # ─── Top-level scores ─────────────────────────────────
-    st.markdown("### 🎯 Overall Scores")
+    st.markdown("### Overall Scores")
 
     if evaluation:
         score_cols = st.columns(4)
@@ -84,7 +84,7 @@ def render():
 
     # ─── Failure Analysis ─────────────────────────────────
     if evaluation:
-        st.markdown("### 🔍 Failure Analysis")
+        st.markdown("### Failure Analysis")
 
         fail_cols = st.columns(2)
 
@@ -170,7 +170,7 @@ def render():
 
     # ─── Distance Analysis ────────────────────────────────
     if query_log:
-        st.markdown("### 📏 Retrieval Distance Analysis")
+        st.markdown("### Retrieval Distance Analysis")
 
         all_distances = []
         for q in query_log:
@@ -239,7 +239,7 @@ def render():
 
     # ─── Detailed Query Evaluations ───────────────────────
     if query_log:
-        st.markdown("### 📋 Detailed Query Evaluations")
+        st.markdown("### Detailed Query Evaluations")
 
         scored_queries = [q for q in query_log if q.get("evaluated")]
         if scored_queries:
@@ -283,7 +283,7 @@ def render():
             st.markdown("<br>", unsafe_allow_html=True)
 
             # Detailed cards
-            st.markdown("### 💡 Improvement Suggestions")
+            st.markdown("### Improvement Suggestions")
             attention = [q for q in scored_queries if (q.get("answer_score") or 5) < 4]
 
             if attention:
@@ -340,7 +340,7 @@ def render():
     st.markdown("<br>", unsafe_allow_html=True)
 
     # ─── Run Evaluation ───────────────────────────────────
-    st.markdown("### ▶️ Run Evaluation")
+    st.markdown("### Run Evaluation")
     eval_cols = st.columns([2, 1])
 
     with eval_cols[0]:
@@ -352,7 +352,7 @@ def render():
         """)
 
     with eval_cols[1]:
-        if st.button("📊 Run Evaluation", type="primary"):
+        if st.button("Run Evaluation", type="primary"):
             with st.spinner("🔍 Evaluating queries with GPT-4o..."):
                 try:
                     from stage6_evaluation import evaluate_all

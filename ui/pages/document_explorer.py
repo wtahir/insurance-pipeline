@@ -59,21 +59,21 @@ def render():
             urgency_counts[urg] = urgency_counts.get(urg, 0) + 1
 
     render_kpi_row([
-        {"label": "Total Documents", "value": total, "icon": "📄"},
-        {"label": "Successful", "value": successful, "icon": "✅"},
-        {"label": "Failed", "value": failed, "icon": "❌"},
-        {"label": "Document Types", "value": len(doc_types), "icon": "🏷️"},
-        {"label": "Languages", "value": len(languages), "icon": "🌐"},
+        {"label": "Total Documents", "value": total, "icon": ""},
+        {"label": "Successful", "value": successful, "icon": ""},
+        {"label": "Failed", "value": failed, "icon": ""},
+        {"label": "Document Types", "value": len(doc_types), "icon": ""},
+        {"label": "Languages", "value": len(languages), "icon": ""},
     ])
 
     st.markdown("<br>", unsafe_allow_html=True)
 
     # ─── Filters ──────────────────────────────────────────
-    st.markdown("### 🔍 Search & Filter")
+    st.markdown("### Search & Filter")
     filter_cols = st.columns([3, 2, 2, 2])
 
     with filter_cols[0]:
-        search_query = st.text_input("🔎 Search by filename or content", placeholder="Type to search...")
+        search_query = st.text_input("Search by filename or content", placeholder="Type to search...")
     with filter_cols[1]:
         type_options = ["All"] + sorted(doc_types.keys())
         selected_type = st.selectbox("Document Type", type_options)
@@ -109,7 +109,7 @@ def render():
         viz_cols = st.columns(3)
 
         with viz_cols[0]:
-            st.markdown("**📊 By Document Type**")
+            st.markdown("**By Document Type**")
             import plotly.express as px
             df_types = pd.DataFrame([{"Type": k.replace("_", " ").title(), "Count": v} for k, v in doc_types.items()])
             fig = px.bar(df_types, x="Type", y="Count",
@@ -123,7 +123,7 @@ def render():
             st.plotly_chart(fig, width='stretch')
 
         with viz_cols[1]:
-            st.markdown("**🌐 By Language**")
+            st.markdown("**By Language**")
             df_lang = pd.DataFrame([{"Language": k.upper(), "Count": v} for k, v in languages.items()])
             fig = px.pie(df_lang, names="Language", values="Count",
                          color_discrete_sequence=["#06B6D4", "#6366F1", "#10B981", "#F59E0B"],
@@ -136,7 +136,7 @@ def render():
             st.plotly_chart(fig, width='stretch')
 
         with viz_cols[2]:
-            st.markdown("**🚨 By Urgency**")
+            st.markdown("**By Urgency**")
             df_urg = pd.DataFrame([{"Urgency": k.title(), "Count": v} for k, v in urgency_counts.items()])
             urg_colors = {"Low": "#10B981", "Normal": "#06B6D4", "High": "#EF4444"}
             fig = px.bar(df_urg, x="Urgency", y="Count",
@@ -153,7 +153,7 @@ def render():
     st.markdown("<br>", unsafe_allow_html=True)
 
     # ─── Document table ───────────────────────────────────
-    st.markdown("### 📑 Document List")
+    st.markdown("### Document List")
 
     # Build summary table
     table_data = []
@@ -198,7 +198,7 @@ def render():
     st.markdown("<br>", unsafe_allow_html=True)
 
     # ─── Document detail viewer ───────────────────────────
-    st.markdown("### 🔬 Document Detail View")
+    st.markdown("### Document Detail View")
 
     filenames = [d.get("file_name", "unknown") for d in filtered]
     if filenames:
@@ -206,7 +206,7 @@ def render():
         selected_doc = next((d for d in filtered if d.get("file_name") == selected_file), None)
 
         if selected_doc:
-            detail_tabs = st.tabs(["📋 Metadata", "📝 Summary", "📄 Original Content"])
+            detail_tabs = st.tabs(["Metadata", "Summary", "Original Content"])
 
             with detail_tabs[0]:
                 meta_cols = st.columns(3)

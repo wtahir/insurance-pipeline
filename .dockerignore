@@ -1,15 +1,32 @@
-.git
-.github
-__pycache__
+# ─── Build artifacts ──────────────────
+__pycache__/
 *.pyc
 *.pyo
-*.pyd
-.Python
-.venv
-venv
-env
-.env
-logs
-data/output
-chroma_db
+*.egg-info/
+
+# ─── Data (generated at runtime) ─────
+data/output/
+data/pdfs/
+chroma_db/
+logs/
 *.log
+
+# ─── Environment & secrets ───────────
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+env/
+.Python
+
+# ─── IDE / OS / VCS ──────────────────
+.git
+.github
+.vscode/
+.idea/
+.DS_Store
+
+# ─── Docs (not needed in image) ──────
+notes.md
+tests/

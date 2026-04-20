@@ -5,19 +5,18 @@ import os
 import json
 import logging
 from datetime import datetime
-from config import PDF_FOLDER, LOG_FOLDER
+from config import PDF_FOLDER, LOG_FOLDER, OUTPUT_FOLDER, INGESTED_DATA, INGESTION_SUMMARY, LOG_FORMAT
 from tqdm import tqdm
 import pdfplumber
 
-# Create log folder if it doesn't exist
-# Without this, logging.basicConfig crashes before anything runs
+# Create folders if they don't exist
 os.makedirs(LOG_FOLDER, exist_ok=True)
-os.makedirs("data/output", exist_ok=True)
+os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
 logging.basicConfig(
     filename=os.path.join(LOG_FOLDER, 'ingestion.log'),
     level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
+    format=LOG_FORMAT,
 )
 
 def extract_text_from_pdf(pdf_path: str) -> dict:
@@ -103,7 +102,7 @@ def ingest_data():
             failed.append(result)
 
     # Save successful results for Stage 2
-    with open("data/output/ingested_data.json", "w") as f:
+    with open(INGESTED_DATA, "w") as f:
         json.dump(successful, f, indent=2)
 
     # Save a summary report so you can see pipeline health at a glance
@@ -115,7 +114,7 @@ def ingest_data():
         "failed_files": [f["file_name"] for f in failed]
     }
 
-    with open("data/output/ingestion_summary.json", "w") as f:
+    with open(INGESTION_SUMMARY, "w") as f:
         json.dump(summary, f, indent=2)
 
     logging.info(f"Ingestion complete. {len(successful)}/{len(pdf_files)} files succeeded.")

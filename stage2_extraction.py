@@ -20,70 +20,36 @@ from typing import Optional
 from pydantic import BaseModel, ValidationError
 from openai import AzureOpenAI
 from dotenv import load_dotenv
-from config import INGESTED_DATA, OUTPUT_FOLDER
+from config import (
+    INGESTED_DATA, OUTPUT_FOLDER, EXTRACTED_DATA, EXTRACTION_SUMMARY,
+    EXTRACTION_MAX_CHARS, AZURE_OPENAI_API_KEY, AZURE_OPENAI_ENDPOINT,
+    AZURE_OPENAI_DEPLOYMENT, AZURE_API_VERSION, LOG_FOLDER, LOG_FORMAT,
+)
+from models import ClaimCommunication, PolicyDocument, InvoiceDocument, UnknownDocument
 
 load_dotenv()
 
-os.makedirs("logs", exist_ok=True)
-os.makedirs("data/output", exist_ok=True)
+os.makedirs(LOG_FOLDER, exist_ok=True)
+os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
 logging.basicConfig(
-    filename="logs/extraction.log",
+    filename=os.path.join(LOG_FOLDER, "extraction.log"),
     level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
+    format=LOG_FORMAT,
 )
 
 # --- Azure OpenAI client ---
-# Reads credentials from your .env file, never hardcoded
+# Reads credentials from config (which reads from .env), never hardcoded
 client = AzureOpenAI(
-    api_key=os.getenv("AZURE_OPENAI_API_KEY"),
-    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
-    api_version="2024-08-01-preview"
+    api_key=AZURE_OPENAI_API_KEY,
+    azure_endpoint=AZURE_OPENAI_ENDPOINT,
+    api_version=AZURE_API_VERSION,
 )
 
-DEPLOYMENT_NAME = os.getenv("AZURE_OPENAI_DEPLOYMENT", "gpt-4o")
+DEPLOYMENT_NAME = AZURE_OPENAI_DEPLOYMENT
 
-# --- Pydantic models ---
-# These define exactly what a valid extraction result looks like.
-# If the LLM returns something missing or with wrong types, Pydantic catches it here
-# rather than letting bad data silently flow into Stage 3.
-
-class ClaimCommunication(BaseModel):
-    document_type: str                        # always "claim_communication"
-    language: str                             # "de", "en", etc.
-    claim_number: Optional[str]               # Optional because it might be missing
-    date: Optional[str]                       # ISO format preferred
-    sender: Optional[str]
-    recipient: Optional[str]
-    subject: Optional[str]
-    summary_en: str                           # English summary — always required
-    attachments_mentioned: list[str]          # Empty list if none
-    action_required: Optional[str]            # What needs to happen next
-    urgency: str                              # "low", "normal", "high"
-    confidence: float                         # 0.0 to 1.0 — how confident is the LLM
-
-
-class PolicyDocument(BaseModel):
-    # This schema is ready for when you add policy documents later.
-    # Stage 2 will route to this automatically based on classification.
-    document_type: str                        # always "policy_document"
-    language: str
-    policy_number: Optional[str]
-    policyholder_name: Optional[str]
-    coverage_type: Optional[str]
-    start_date: Optional[str]
-    end_date: Optional[str]
-    premium_amount: Optional[str]
-    summary_en: str
-    confidence: float
-
-
-class UnknownDocument(BaseModel):
-    # Fallback for anything that doesn't fit known types
-    document_type: str                        # always "unknown"
-    language: str
-    summary_en: str
-    confidence: float
+# Pydantic models are imported from models.py
+# This keeps schemas reusable across stages and tests.
 
 
 # --- Prompt ---
@@ -145,10 +111,10 @@ Document text:
 """
 
 
-def truncate_text(text: str, max_chars: int = 1500) -> str:
+def truncate_text(text: str, max_chars: int = EXTRACTION_MAX_CHARS) -> str:
     """
     Takes only the first max_chars characters for classification.
-    Why 1500? Enough to identify document type and extract header fields.
+    Default is configurable via EXTRACTION_MAX_CHARS (env or config.py).
     Sending full documents wastes tokens — the claim number and sender
     are always in the first few lines of an email.
     """
@@ -171,6 +137,8 @@ def validate_extraction(raw: dict) -> tuple[BaseModel, str]:
         return ClaimCommunication(**raw), doc_type
     elif doc_type == "policy_document":
         return PolicyDocument(**raw), doc_type
+    elif doc_type == "invoice":
+        return InvoiceDocument(**raw), doc_type
     else:
         return UnknownDocument(
             document_type="unknown",
@@ -198,7 +166,7 @@ def extract_document(document: dict) -> dict:
             "extracted_at": datetime.now().isoformat()
         }
 
-    truncated = truncate_text(content, max_chars=1500)
+    truncated = truncate_text(content, max_chars=EXTRACTION_MAX_CHARS)
     prompt = EXTRACTION_PROMPT + "\n" + truncated
 
     try:
@@ -263,7 +231,7 @@ def extract_all():
 
     # Load already successful results if they exist, to avoid reprocessing
     existing_results = {}
-    output_path = "data/output/extracted_data.json"
+    output_path = EXTRACTED_DATA
     if os.path.exists(output_path):
         with open(output_path, "r") as f:
             for r in json.load(f):
@@ -296,7 +264,7 @@ def extract_all():
             print(f"✗ failed: {result.get('reason', '')[:60]}")
 
     # Save full results for Stage 3
-    with open("data/output/extracted_data.json", "w") as f:
+    with open(EXTRACTED_DATA, "w") as f:
         json.dump(results, f, indent=2, ensure_ascii=False)  # ensure_ascii=False preserves German characters
 
     # Save summary
@@ -315,7 +283,7 @@ def extract_all():
         "document_types_found": doc_type_counts
     }
 
-    with open("data/output/extraction_summary.json", "w") as f:
+    with open(EXTRACTION_SUMMARY, "w") as f:
         json.dump(summary, f, indent=2)
 
     logging.info(f"Extraction complete. {successful} success, {failed} failed, {skipped} skipped.")

@@ -32,7 +32,7 @@ def render():
     )
 
     # ─── Query form ───────────────────────────────────────
-    st.markdown("### 💬 Ask a Question")
+    st.markdown("### Ask a Question")
 
     query_col, options_col = st.columns([3, 1])
 
@@ -59,7 +59,7 @@ def render():
             claim_filter = st.text_input("Claim number filter", placeholder="e.g., 2025 1033831")
 
     # ─── Submit ───────────────────────────────────────────
-    if st.button("🔎 Search & Generate Answer", type="primary"):
+    if st.button("Search & Generate Answer", type="primary"):
         if not user_query.strip():
             st.warning("Please enter a question.")
             return
@@ -106,7 +106,7 @@ def render():
     st.markdown("<br>", unsafe_allow_html=True)
 
     # ─── Query History ────────────────────────────────────
-    st.markdown("### 📜 Query History")
+    st.markdown("### Query History")
     query_log = load_json("query_log.json")
 
     if query_log:
@@ -165,12 +165,18 @@ def _render_query_result(result: dict, idx: int):
 
     # Answer box
     answer = result.get("answer", "No answer generated.")
+    reranking_label = "Reranked" if result.get("reranking_enabled") else "Bi-encoder only"
     st.markdown(f"""
     <div style="background:linear-gradient(135deg, #1E293B, #0F172A);
                 border:1px solid #334155; border-left:4px solid #6366F1;
                 border-radius:8px; padding:20px; margin-bottom:16px;">
-        <div style="color:#94A3B8; font-size:0.75rem; text-transform:uppercase;
-                    letter-spacing:0.05em; margin-bottom:8px;">💡 AI Generated Answer</div>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <div style="color:#94A3B8; font-size:0.75rem; text-transform:uppercase;
+                        letter-spacing:0.05em;">AI Generated Answer</div>
+            <div style="color:#818CF8; font-size:0.7rem; font-weight:600;
+                        background:rgba(99,102,241,0.15); padding:2px 8px; border-radius:10px;">
+                {reranking_label}</div>
+        </div>
         <div style="color:#F8FAFC; line-height:1.7; font-size:0.95rem;">
             {answer}
         </div>
@@ -199,6 +205,13 @@ def _render_query_result(result: dict, idx: int):
                     quality_color = "#EF4444"
                     quality_label = "Weak match"
 
+                rerank_score = chunk.get("rerank_score")
+                rerank_html = (
+                    f'<span style="color:#818CF8; margin-left:8px; font-size:0.8rem;">'
+                    f'Rerank: {rerank_score:.3f}</span>'
+                    if rerank_score is not None else ""
+                )
+
                 st.markdown(f"""
                 <div style="background:#0F172A; border:1px solid #334155; border-radius:8px;
                             padding:16px; margin-bottom:10px;">
@@ -217,6 +230,7 @@ def _render_query_result(result: dict, idx: int):
                             <span style="color:#94A3B8; margin-left:8px; font-size:0.8rem;">
                                 Distance: {distance:.4f}
                             </span>
+                            {rerank_html}
                         </div>
                     </div>
                     <div style="display:flex; gap:12px; margin-bottom:10px; flex-wrap:wrap;">

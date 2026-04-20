@@ -13,29 +13,35 @@ import logging
 from datetime import datetime
 from openai import AzureOpenAI
 from dotenv import load_dotenv
+from config import (
+    QUERY_LOG, EVALUATION_REPORT, EVALUATION_SUMMARY,
+    DISTANCE_THRESHOLD, EVAL_CHUNK_TRUNCATE,
+    AZURE_OPENAI_API_KEY, AZURE_OPENAI_ENDPOINT,
+    AZURE_OPENAI_DEPLOYMENT, AZURE_API_VERSION,
+    LOG_FOLDER, LOG_FORMAT,
+)
 
 load_dotenv()
 
-os.makedirs("logs", exist_ok=True)
+os.makedirs(LOG_FOLDER, exist_ok=True)
 
 logging.basicConfig(
-    filename="logs/evaluation.log",
+    filename=os.path.join(LOG_FOLDER, "evaluation.log"),
     level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
+    format=LOG_FORMAT,
 )
 
 client = AzureOpenAI(
-    api_key=os.getenv("AZURE_OPENAI_API_KEY"),
-    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
-    api_version="2024-08-01-preview"
+    api_key=AZURE_OPENAI_API_KEY,
+    azure_endpoint=AZURE_OPENAI_ENDPOINT,
+    api_version=AZURE_API_VERSION,
 )
-DEPLOYMENT_NAME = os.getenv("AZURE_OPENAI_DEPLOYMENT", "gpt-4o")
+DEPLOYMENT_NAME = AZURE_OPENAI_DEPLOYMENT
 
-QUERY_LOG_PATH = "data/output/query_log.json"
+QUERY_LOG_PATH = QUERY_LOG
 
 # Distance threshold — chunks above this are considered poor retrievals.
-# Based on what we saw in Stage 5: 0.6 is a reasonable cutoff.
-DISTANCE_THRESHOLD = 0.6
+DISTANCE_THRESHOLD_VAL = DISTANCE_THRESHOLD
 
 # --- Evaluation prompt ---
 # We ask GPT-4o to score two things separately:
@@ -100,7 +106,7 @@ def format_chunks_for_evaluation(chunks: list[dict]) -> str:
     parts = []
     for i, chunk in enumerate(chunks):
         meta = chunk.get("metadata", {})
-        text = chunk.get("text", "")[:400]  # truncate long chunks
+        text = chunk.get("text", "")[:EVAL_CHUNK_TRUNCATE]
         distance = chunk.get("distance", "unknown")
         parts.append(
             f"[Chunk {i+1} | Distance: {distance} | "
@@ -122,15 +128,15 @@ def evaluate_query(query_record: dict) -> dict:
     # Calculate average distance — retrieval health indicator
     distances = [c.get("distance", 1.0) for c in chunks]
     avg_distance = round(sum(distances) / len(distances), 3) if distances else 1.0
-    poor_chunks = sum(1 for d in distances if d > DISTANCE_THRESHOLD)
+    poor_chunks = sum(1 for d in distances if d > DISTANCE_THRESHOLD_VAL)
 
     context = format_chunks_for_evaluation(chunks)
 
-    prompt = (
-        EVALUATION_PROMPT
-        + f"\n\nQuestion: {query}"
-        + f"\n\nRetrieved chunks:\n{context}"
-        + f"\n\nGenerated answer:\n{answer}"
+    # Build the prompt — fill placeholders directly (no double-append)
+    prompt = EVALUATION_PROMPT.format(
+        query=query,
+        context=context,
+        answer=answer,
     )
 
     try:
@@ -239,7 +245,7 @@ def evaluate_all():
         key=lambda x: (x.get("answer_score") or 0)
     )
 
-    with open("data/output/evaluation_report.json", "w", encoding="utf-8") as f:
+    with open(EVALUATION_REPORT, "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2, ensure_ascii=False)
 
     # Summary statistics
@@ -271,7 +277,7 @@ def evaluate_all():
         ]
     }
 
-    with open("data/output/evaluation_summary.json", "w", encoding="utf-8") as f:
+    with open(EVALUATION_SUMMARY, "w", encoding="utf-8") as f:
         json.dump(summary, f, indent=2, ensure_ascii=False)
 
     logging.info(f"Evaluation complete. avg_retrieval={avg_retrieval} avg_answer={avg_answer}")

@@ -1,16 +1,23 @@
-chromadb>=0.5.0
-onnxruntime==1.15.1
-sentence-transformers
-openai
-pydantic
-pdfplumber
-python-dotenv
-loguru
-reportlab>=4.0.0
-celery>=5.6.2
-redis==7.3.0
+# ─── Core Pipeline ────────────────────────────────
+pdfplumber>=0.10.0
+openai>=1.0.0
+pydantic>=2.0.0
+python-dotenv>=1.0.0
+tqdm>=4.60.0
 
-# UI Dashboard
+# ─── Embeddings & Vector Store ────────────────────
+chromadb>=0.5.0
+sentence-transformers>=2.2.0
+onnxruntime>=1.15.0
+
+# ─── Async / Parallel Processing ──────────────────
+celery>=5.3.0
+redis>=5.0.0
+
+# ─── Dashboard UI ─────────────────────────────────
 streamlit>=1.30.0
 plotly>=5.18.0
 pandas>=2.0.0
+
+# ─── Synthetic Data Generation ────────────────────
+fpdf2>=2.7.0

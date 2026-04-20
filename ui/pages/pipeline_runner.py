@@ -38,43 +38,43 @@ def render():
     )
 
     # ─── Current pipeline status ──────────────────────────
-    st.markdown("### 📊 Current Pipeline Status")
+    st.markdown("### Current Pipeline Status")
 
     stages_info = [
         {
             "name": "Ingestion",
             "file": "ingestion_summary.json",
-            "icon": "📄",
+            "icon": "",
             "check_key": "successful",
         },
         {
             "name": "Extraction",
             "file": "extraction_summary.json",
-            "icon": "🤖",
+            "icon": "",
             "check_key": "successful",
         },
         {
             "name": "Chunking",
             "file": "chunking_summary.json",
-            "icon": "✂️",
+            "icon": "",
             "check_key": "total_chunks_produced",
         },
         {
             "name": "Embedding",
             "file": "embedding_summary.json",
-            "icon": "📐",
+            "icon": "",
             "check_key": "chunks_stored",
         },
         {
             "name": "Retrieval",
             "file": "query_log.json",
-            "icon": "🔎",
+            "icon": "",
             "check_key": None,
         },
         {
             "name": "Evaluation",
             "file": "evaluation_summary.json",
-            "icon": "📊",
+            "icon": "",
             "check_key": "total_queries_evaluated",
         },
     ]
@@ -108,7 +108,7 @@ def render():
             st.markdown(f"""
             <div style="background:#1E293B; border:1px solid #334155; border-radius:12px;
                         padding:18px; text-align:center;">
-                <div style="font-size:1.6rem; margin-bottom:6px;">{info['icon']}</div>
+                <div style="font-size:1.2rem; margin-bottom:6px; font-weight:600; color:#6366F1;">{info['name'][:3].upper()}</div>
                 <div style="color:#F8FAFC; font-weight:600; font-size:0.9rem;">{info['name']}</div>
                 <div style="color:{status_color}; font-size:0.8rem; font-weight:600;
                             margin:6px 0;">{status}</div>
@@ -120,13 +120,13 @@ def render():
     st.markdown("<br>", unsafe_allow_html=True)
 
     # ─── Stage Execution ──────────────────────────────────
-    st.markdown("### ▶️ Run Pipeline Stages")
+    st.markdown("### Run Pipeline Stages")
 
     tab1, tab2, tab3, tab4 = st.tabs([
-        "🔄 Full Pipeline",
-        "📄 Stage 1: Ingestion",
-        "🤖 Stage 2: Extraction",
-        "✂️ Stage 3–4: Chunk & Embed",
+        "Full Pipeline",
+        "Stage 1: Ingestion",
+        "Stage 2: Extraction",
+        "Stage 3–4: Chunk & Embed",
     ])
 
     with tab1:
@@ -139,9 +139,9 @@ def render():
         """)
 
         pdf_count = get_pdf_count()
-        st.info(f"📂 **{pdf_count}** PDF files found in `data/pdfs/`")
+        st.info(f"**{pdf_count}** PDF files found in `data/pdfs/`")
 
-        if st.button("🚀 Run Full Pipeline", key="run_full", type="primary"):
+        if st.button("Run Full Pipeline", key="run_full", type="primary"):
             _run_full_pipeline()
 
     with tab2:
@@ -152,7 +152,7 @@ def render():
         This stage runs locally — no API calls needed.
         """)
 
-        if st.button("▶️ Run Ingestion", key="run_ingest"):
+        if st.button("Run Ingestion", key="run_ingest"):
             _run_stage("ingestion", _execute_ingestion)
 
     with tab3:
@@ -169,7 +169,7 @@ def render():
         else:
             st.warning("⚠️ Run Stage 1 (Ingestion) first")
 
-        if st.button("▶️ Run Extraction", key="run_extract"):
+        if st.button("Run Extraction", key="run_extract"):
             _run_stage("extraction", _execute_extraction)
 
     with tab4:
@@ -186,13 +186,13 @@ def render():
         else:
             st.warning("⚠️ Run Stage 2 (Extraction) first")
 
-        if st.button("▶️ Run Chunking + Embedding", key="run_chunk_embed"):
+        if st.button("Run Chunking + Embedding", key="run_chunk_embed"):
             _run_stage("chunking & embedding", _execute_chunk_and_embed)
 
     st.markdown("<br>", unsafe_allow_html=True)
 
     # ─── Log Viewer ───────────────────────────────────────
-    st.markdown("### 📝 Recent Logs")
+    st.markdown("### Recent Logs")
     log_file = st.selectbox(
         "Select log file",
         ["ingestion.log", "extraction.log", "chunking.log", "embedding.log", "retrieval.log", "evaluation.log"],

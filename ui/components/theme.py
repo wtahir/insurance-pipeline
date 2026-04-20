@@ -29,12 +29,19 @@ CUSTOM_CSS = """
 /* ─── Hide default Streamlit chrome ── */
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
-header {visibility: hidden;}
 
 /* ─── Sidebar ────────────────────── */
 section[data-testid="stSidebar"] {
     background: linear-gradient(180deg, #0F172A 0%, #1E293B 100%);
     border-right: 1px solid #334155;
+    min-width: 280px;
+}
+
+/* Ensure sidebar toggle button is always visible */
+button[data-testid="stSidebarCollapseButton"],
+button[data-testid="baseButton-header"] {
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 section[data-testid="stSidebar"] .stMarkdown h1,

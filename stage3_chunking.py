@@ -9,19 +9,24 @@ import os
 import json
 import logging
 from datetime import datetime
-from config import EXTRACTED_DATA, OUTPUT_FOLDER
+from config import (
+    EXTRACTED_DATA, OUTPUT_FOLDER, CHUNKS_DATA, CHUNKING_SUMMARY,
+    CHUNK_SIZE, CHUNK_OVERLAP, MIN_CHUNK_SIZE, SHORT_DOC_THRESHOLD,
+    LOG_FOLDER, LOG_FORMAT,
+)
 
-os.makedirs("logs", exist_ok=True)
-os.makedirs("data/output", exist_ok=True)
+os.makedirs(LOG_FOLDER, exist_ok=True)
+os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
 logging.basicConfig(
-    filename="logs/chunking.log",
+    filename=os.path.join(LOG_FOLDER, "chunking.log"),
     level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
+    format=LOG_FORMAT,
 )
 
 # --- Chunking configuration ---
-# These are the values you'd tune based on your retrieval quality in Stage 6.
+# All parameters are now centralised in config.py and can be overridden
+# via environment variables (CHUNK_SIZE, CHUNK_OVERLAP, etc.).
 # chunk_size: how many characters per chunk
 # chunk_overlap: how many characters repeated between consecutive chunks
 #   Why overlap? If a claim number appears at the end of chunk 3 and the
@@ -30,11 +35,6 @@ logging.basicConfig(
 # min_chunk_size: chunks smaller than this get discarded — too small to be useful
 # short_doc_threshold: documents with fewer characters than this
 #   get stored as a single chunk regardless of size
-
-CHUNK_SIZE = 800
-CHUNK_OVERLAP = 150
-MIN_CHUNK_SIZE = 100
-SHORT_DOC_THRESHOLD = 600
 
 
 def chunk_text(text: str, chunk_size: int, overlap: int) -> list[str]:
@@ -186,7 +186,7 @@ def chunk_all():
             total_single_chunk_docs += 1
 
     # Save all chunks for Stage 4
-    with open("data/output/chunks.json", "w", encoding="utf-8") as f:
+    with open(CHUNKS_DATA, "w", encoding="utf-8") as f:
         json.dump(all_chunks, f, indent=2, ensure_ascii=False)
 
     summary = {
@@ -204,7 +204,7 @@ def chunk_all():
         }
     }
 
-    with open("data/output/chunking_summary.json", "w") as f:
+    with open(CHUNKING_SUMMARY, "w") as f:
         json.dump(summary, f, indent=2)
 
     logging.info(f"Chunking complete. {len(all_chunks)} chunks from {total_docs_processed} documents.")
